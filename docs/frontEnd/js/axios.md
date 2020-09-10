@@ -8,10 +8,10 @@ tags:
 - ES6
 ---
 
+## 一、httpbin.org
 
-## 一、httpbin.org1
+> [httpbin.org](https://httpbin.org/) 是一个可以提供接口的网站，里面包含了各种不同的请求方法，可以作为测试接口时使用*
 
-> [httpbin.org](https://httpbin.org/) 是一个可以提供接口的网站，里面包含了各种不同的请求方法，可以作为测试接口时使用
 
 
 ## 二、axios起步
@@ -296,8 +296,199 @@ axios.all([
 axios.defaults.baseURL='https://httpbin.org'
 axios.defaults.timeout=5000
 ```
-...持续更新
 
+#### 创建axios实例
+
+可以在不同的模块单独配置 `axios` 实例，比如首页和详情单独使用
+
+```js
+// 创建axios实例
+const instance1 = axios.create({
+  baseURL: 'https://api.example.com'
+});
+
+instance1('url1',{
+  timeout: 1000,
+}).then(res=>{
+  console.log(res);
+})
+
+instance1('url2',{
+  timeout: 2000,
+}).then(res=>{
+  console.log(res);
+})
+```
+
+#### 拦截器
+
+在请求或响应被 `then` 或 `catch` 处理前拦截它们
+
+```js
+// 添加请求拦截器
+// 注意 request拦截器是发送请求之前的拦截
+// 处理完之后需要把结果返回传出去，不然没有返回值请求不能正常发送或者返回出去
+axios.interceptors.request.use(function (config) {
+    // 在发送请求之前做些什么
+    // 可以做一些信息的补充，比如请求头不符合服务器要求，进行补充
+    // 可以发网络请求时，界面中加一个请求中动画
+    // 比如登陆，查看是否有token，没有可以返回回去要求用户登录
+    return config;
+  }, function (error) {
+    // 对请求错误做些什么
+    return Promise.reject(error);
+  });
+
+// 添加响应拦截器
+axios.interceptors.response.use(function (response) {
+    // 对响应数据做点什么
+    // 这里可以直接返回data
+    return response.data;
+  }, function (error) {
+    // 对响应错误做点什么
+    return Promise.reject(error);
+  });
+```
+
+
+
+
+
+## 三、网络请求模块的封装
+
+> 为什么要做封装？
+>
+> 我们要有这样的意识，在项目中，对于一些反复依赖的第三方模块或者框架，我们一般都要对其进行封装
+>
+> * 可以在我们项目需求基础上对其优化
+> * 防止某天需要更换模块的时候，会产生过大的工作量和不可避免的灾难
+
+#### 封装思路
+
+我们将自己的封装放在 `src/network/request.js`
+
+* 方法一，最基础的创建实例->使用回调函数触发
+
+  ```js
+  import axios from "axios";
+  
+  // 这里没export defalut是因为可能会有多个方法
+  /**
+   * 
+   * @param {Object} config 
+   * @param {Function} success 成功的回调函数
+   * @param {Function} failure 失败的回调函数
+   */
+  export function request(config,success,failure) {
+    // 创建实例
+    const instance = axios.create({
+      baseURL: 'https://httpbin.org',
+      timeout: 5000
+    })
+  
+    instance(config)
+      .then(res => {
+        success(res)
+      })
+      .catch(err => {
+        failure(err)
+      })
+  }
+  ```
+
+  外部调用
+
+  ```js
+  created() {
+      // 方法1
+      request(
+        {
+          url: "/get",
+        },
+        (res) => {
+          console.log(res);
+          this.jsonData = res;
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
+   }
+  ```
+
+* 方法二，返回Promise对象
+
+  * 处理方式一，这个方式复杂化了，相当于把 `instance` 返回的 `Promise` 解包后再变成 `Promise` 对象传回去
+
+  ```js
+  import axios from "axios";
+  
+  export function request(config) {
+    return new Promise((resolve, reject) => {
+      // 创建实例
+      const instance = axios.create({
+        baseURL: 'https://httpbin.org',
+        timeout: 5000
+      })
+  
+      // 发送请求
+      instance(config)
+        .then(res => {
+          resolve(res)
+        })
+        .catch(err => {
+          reject(err)
+        })
+    })
+  }
+  ```
+
+  * 处理方式二，直接返回 `instance(config)` 
+
+    > 观察源码可以知道
+    >
+    > 由于`axios.create`返回的本身是`AxiosInstance`对象
+    >
+    > <img src="https://gitee.com/rodrick278/img/raw/master/img/image-20200910225109443.png" alt="image-20200910225109443" style="zoom: 50%;" />
+    >
+    > 而`AxiosInstance(config)`方法返回的就是 `AxiosPromise`对象
+    >
+    > <img src="https://gitee.com/rodrick278/img/raw/master/img/image-20200910225132481.png" alt="image-20200910225132481" style="zoom:50%;" />
+    >
+    > 所以直接返回`Promise`对象就好
+
+    
+
+  ```js
+  import axios from "axios";
+  
+  export function request(config) {
+    // 由于axios.create返回的本身是AxiosInstance对象，而AxiosInstance(config)方法返回的就是 AxiosPromise对象，所以直接返回Promise对象就好
+    const instance = axios.create({
+      baseURL: 'https://httpbin.org',
+      timeout: 3000
+    })
+  ```
+
+  外部调用
+
+  ```js
+  created() {
+      // 方法2&3
+      request({
+        url: "/get",
+      })
+        .then((res) => {
+          console.log("out res",res);
+          this.jsonData = res;
+        })
+        .catch((err) => {
+          console.log("out err", err);
+        });
+   }
+  ```
+
+  
 
 
 
