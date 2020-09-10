@@ -445,12 +445,12 @@ git fetch origin master:<local-branch-name>
 
 - 创建本地仓库 git init
 
-  > git init
+  * git init
 
 - 链接本地仓库与远端仓库
 
-  > git remote add  origin 
-  >
+  * git remote add  origin
+
   > origin默认是远端仓库别名  url 可以是**可以使用https或者ssh的方式新建**
 
 - 检查配置信息
@@ -479,7 +479,18 @@ git fetch origin master:<local-branch-name>
 
 - 提交到缓存区 
 
-  - git add .  全部上传到缓存区
+  - git add .  
+
+  > 他会监控工作区的状态树，使用它会把工作时的**所有变化提交**到暂存区，包括文件内容修改(modified)以及新文件(new)，但不包括被删除的文件。
+
+  * git add -u
+
+  > 他仅监控**已经被add的文件**（即tracked file），他会将被修改的文件提交到暂存区。add -u 不会提交新文件（untracked file）。（git add --update的缩写）
+
+  * git add -A
+
+  > 是上面两个功能的合集（git add --all的缩写）
+
   - git add   指定文件
 
 - 提交到本地仓库
@@ -488,35 +499,48 @@ git fetch origin master:<local-branch-name>
 
 - 提交远程仓库
 
+  - git push origin master [默认本地Master到远程Master]
   - git push <远程主机名> <本地分支名>:<远程分支名>
+
+  > 例如 git push origin master：refs/for/master ，即是将本地的master分支推送到远程主机origin上的对应master分支， origin 是远程主机名
+
+  * git push -f origin master
+
+  > 强制push
 
 - 查看分支
 
-  - git  branch
+  - git  branch 列出本地已经存在的分支
+  - git branch -r  查看远程版本库分支列表
+  - git branch -a  查看所有分支列表，包括本地和远程
+  - 
 
 - 创建新分支
 
-  - git branch 
+  - git branch \<branchname>
 
 - 切换分支
 
   - git checkout 
 
-- 创建分支并切换
+- 操作文件 | 操作分支
 
-  - git checkout -b 
+  - git checkout filename 放弃单个文件的修改
+  - git checkout . 放弃当前目录下的修改
+  - git checkout master 将分支切换到master
+  - git checkout -b master 如果分支存在则只切换分支，若不存在则创建并切换到master分支
 
 - 删除分支
 
-  - git branch -d 
+  - git branch -d \<branchname>
 
 - 删除远程分支
 
   - git push -d  
 
-- 切换分支
+- 给分支重命名
 
-  - git checkout 
+  - git branch -m oldName newName
 
 ## 忽略文件 .gitignore
 
