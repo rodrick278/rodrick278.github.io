@@ -22,9 +22,8 @@ sticky: 1
 
 
 
-## Vuepress+Valine+LeanCloud+Github Actions 构建个人博客评论体系
 
-### 参考来源
+# 参考来源
 
 > [Valine](https://valine.js.org/) ：评论管理系统
 >
@@ -32,15 +31,14 @@ sticky: 1
 >
 > [LeanCloud流控原因的解决方案](https://www.antmoe.com/posts/ff6aef7b/)：由于白嫖党过多导致的官方限流解决方案
 
-### 开始
+# 开始
 
-#### vuepress配置LeanCloud
 
-##### 1. 打开[`LeanCloud`](https://console.leancloud.app/) 官网，注册账号
+### 1. 打开[`LeanCloud`](https://console.leancloud.app/) 官网，注册账号
 
 <img src="https://gitee.com/rodrick278/img/raw/master/img/image-20200911183531065.png" alt="image-20200911183531065" style="zoom: 50%;" />
 
-##### 2. 登陆
+### 2. 登陆
 
 登陆之后右上角选择 **国际版**【**如果你的域名备过案了就选个正常节点就行，但是没备案的或者使用ghpages这种的，请选择国际版**】，然后创建新的应用
 
@@ -48,7 +46,7 @@ sticky: 1
 
 
 
-##### 3. 应用创建后
+### 3. 应用创建后
 
 应用创建好以后，进入刚刚创建的应用，选择左下角的`设置`>`应用Key`,找到你的`APP ID`和`APP Key`,然后填入我们项目的 `config.js`
 
@@ -61,7 +59,7 @@ sticky: 1
   }
 ```
 
-##### 4. `valine-admin` 的配置
+### 4. `valine-admin` 的配置
 
 这段不做详细介绍，参见[官方说明](http://www.zhaojun.im/hexo-valine-admin/)
 
@@ -112,7 +110,7 @@ sticky: 1
 
    [![img](https://camo.githubusercontent.com/35e08261b6a7d2570c8bab872dc69ffd21116dc0/68747470733a2f2f63646e2e6a756e362e6e65742f3230313831323031313434345f3738332e706e67)](https://camo.githubusercontent.com/35e08261b6a7d2570c8bab872dc69ffd21116dc0/68747470733a2f2f63646e2e6a756e362e6e65742f3230313831323031313434345f3738332e706e67)
 
-##### 5. 流控问题解决
+### 5. 流控问题解决
 
 ​	用一段时间后，会在日志里发现定时任务报错："因流控原因，通过定时任务唤醒体验版实例失败，建议升级至标准版云引擎实例避免休眠"，官方说法是：
 
