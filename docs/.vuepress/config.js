@@ -36,8 +36,8 @@ module.exports = {
     ],
     // valineConfig 评论
     valineConfig: {
-      appId: '5hUbqcG0kfjUFI7BhAywtKbU-gzGzoHsz',// your appId
-      appKey: 'TbbaI0ARKgkIFdcXjSqn3CV4', // your appKey
+      appId: 'Ku8egeKXzFIuu8TkdMv0b7OF-MdYXbMMI',// your appId
+      appKey: 'rlAkigkuUcU7LaSRBA4QB6Yd', // your appKey
       visitor: true,
       placeholder: 'Hi~留下邮箱可以第一时间收到回复的邮件提醒哦(๑´ㅂ`๑)',
       emojiCDN: '//i0.hdslb.com/bfs/emote/',
