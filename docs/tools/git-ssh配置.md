@@ -7,7 +7,7 @@ tags:
 - git
 ---
 
-::: warning Tip
+::: tip Tip
 vuepress部署的时候，因为ssh的问题踩了点坑总结一下
 :::
 

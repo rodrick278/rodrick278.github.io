@@ -3,6 +3,7 @@ title: 关于我
 date: 2020-09-07
 author: rodrick
 publish: false
+sidebar: false
 ---
 
 ## Hi 你好，我是
