@@ -28,7 +28,7 @@
 
 ##### 1. 打开[`LeanCloud`](https://console.leancloud.app/) 官网，注册账号
 
-<img src="C:\Users\Rodrick\AppData\Roaming\Typora\typora-user-images\image-20200911183531065.png" alt="image-20200911183531065" style="zoom: 50%;" />
+<img src="https://gitee.com/rodrick278/img/raw/master/img/image-20200911183531065.png" alt="image-20200911183531065" style="zoom: 50%;" />
 
 ##### 2. 登陆
 
