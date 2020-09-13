@@ -1,4 +1,4 @@
-module.exports=[
+module.exports = [
   // 时间轴
   { text: 'Home', link: '/', icon: 'reco-home' },
   { text: 'About', link: '/other/me.md', icon: 'reco-account' },
@@ -12,6 +12,7 @@ module.exports=[
       { text: 'MDN', link: 'https://developer.mozilla.org/zh-CN/' },
       { text: 'Node中文网', link: 'http://nodejs.cn/api/' },
       { text: 'LeetCode', link: 'https://leetcode-cn.com/' },
+      { text: '牛客网', link: 'https://www.nowcoder.com/' },
       { text: 'React', link: 'https://react.docschina.org/' },
       { text: '小程序', link: 'https://developers.weixin.qq.com/miniprogram/dev/framework/' },
       { text: 'ES6', link: 'https://es6.ruanyifeng.com/' },
