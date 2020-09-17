@@ -20,7 +20,8 @@ module.exports = {
   '/dataBase/': [{
     title: 'Mysql',  
     children: [  
-      'mysql-根据指定字符分隔字符串然后循环做操作'
+      'mysql-根据指定字符分隔字符串然后循环做操作',
+      '查询函数LOCATE、POSITION、INSTR、FIND_IN_SET、IN、LIKE'
     ]
   }]
 }
