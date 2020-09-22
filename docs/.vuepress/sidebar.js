@@ -14,7 +14,8 @@ module.exports = {
       '模块化&Webpack',
       'Promise&async&await',
       'WebSocket原理浅析',
-      'axios'
+      'axios',
+      '变量提升'
     ]
   }],
   '/dataBase/': [{
