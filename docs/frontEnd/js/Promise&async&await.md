@@ -182,6 +182,35 @@ new Promise((resolve, reject) => {
     })
 ```
 
+### 5.手写Promise.all
+
+> Promise.all(iterable) 方法返回一个 Promise 实例，此实例在 iterable 参数内所有的 promise 都“完成（resolved）”或参数中不包含 promise 时回调完成（resolve）；如果参数中 promise 有一个失败（rejected），此实例回调失败（reject），失败原因的是第一个失败 promise 的结果。
+
+```js
+// 手写Promise.all()
+Promise.property.all = function (iterators) {
+    const promises = Array.from(iterators);
+    const len = promises.length;
+    let count = 0;
+    let resultList = [];
+    return new Promise((resolve,reject)=>{
+        promises.forEach((p,index) =>{
+            Promise.resolve(p)
+                .then((result)=>{
+                count++;
+                resultList[index] = result;
+                if(count === len){
+                    resolve(resultList);
+                }
+            })
+                .catch(e=>{
+                reject(e);
+            })
+        })
+    })
+}
+```
+
 
 
 ## async & await
