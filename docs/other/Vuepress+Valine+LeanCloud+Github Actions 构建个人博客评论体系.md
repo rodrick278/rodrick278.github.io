@@ -22,6 +22,21 @@ sticky: 1
 
 
 
+## 20200926 更新
+
+> 国内大量使用国际版LeanCloud后端的博客的Valine评论一齐失效
+>
+> 通过[Valine的Github的Issue](https://github.com/xCss/Valine/issues/340)得知，早在5月份LeanCloud官方就低调表示us.avoscloud.com域名将于不久后下线。
+>
+> 参考上方的讨论办法，现在如果使用国际版LeanCloud作为Valine评论的后端的话则必须指定自定义服务器URL才能正常使用了。
+>
+> 自定义服务器的URL需要到LeanCloud后台查看。打开后台之后进入Settings - App Keys，找到Domain whitelist，里面的Request domain里面的那个xxxxxxxx.api.lncldglobal.com就是你需要指定的服务器URL。其中xxxxxxxx就是各位的AppID的前8位字符。
+>
+> 然后再 `config.js` 里加上 `serverURLs:'https://xxxxx.api.lncldglobal.com',` 即可
+
+------
+
+
 
 # 参考来源
 
@@ -32,7 +47,6 @@ sticky: 1
 > [LeanCloud流控原因的解决方案](https://www.antmoe.com/posts/ff6aef7b/)：由于白嫖党过多导致的官方限流解决方案
 
 # 开始
-
 
 ### 1. 打开[`LeanCloud`](https://console.leancloud.app/) 官网，注册账号
 
