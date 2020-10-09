@@ -30,4 +30,10 @@ module.exports = {
       '查询函数LOCATE、POSITION、INSTR、FIND_IN_SET、IN、LIKE'
     ]
   }],
+  '/other/interview/': [{
+    title: '面试',
+    children: [
+      'HTML题目整理'
+    ]
+  }],
 }
