@@ -8,14 +8,15 @@ module.exports = {
     ]
   }],
   '/frontEnd/': [{
-    title: 'ES6',
+    title: 'JS',
     children: [
       'js/ES6核心语法',
       'js/模块化&Webpack',
       'js/Promise&async&await',
       'js/WebSocket原理浅析',
       'js/axios',
-      'js/变量提升'
+      'js/变量提升',
+      'js/JavaScript 中 call()、apply()、bind() 的用法'
     ]
   },{
     title: 'CSS',

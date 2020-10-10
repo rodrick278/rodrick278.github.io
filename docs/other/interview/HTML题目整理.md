@@ -513,3 +513,159 @@ XHTML 1.0 规定了三种 XML 文档类型：**Strict、Transitional 以及 Fram
 **Standards** （标准）模式（也就是严格呈现模式）用于呈现遵循最新标准的网页，
 
 而 **Quirks**（包容）模式（也就是松散呈现模式或者兼容模式）用于呈现为传统浏览器而设计的网页。
+
+
+
+# 二、通信
+
+## 1. 多浏览器窗口间通信
+
+* window.opener
+
+  父子窗口通信
+
+  ```html
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <meta charset="utf-8">
+  <script>
+  function openWin(){
+      myWindow=window.open('','','width=200,height=100');
+      myWindow.document.write("<p>这是我的窗口</p>");
+      myWindow.focus();
+      myWindow.opener.document.write("<p>这个是源窗口!</p>");
+  }
+  </script>
+  </head>
+  <body>
+  
+  <input type="button" value="打开我的窗口" onclick="openWin()" />
+  
+  </body>
+  </html>
+  ```
+
+* WebSocket
+
+  非http方式，后端连协
+
+* **localstorge**
+
+  **标签页 1**：
+
+  ```html
+  <input id="name">
+  <input type="button" id="btn" value="提交">
+  
+  <script type="text/javascript">
+      $(function(){
+          $("#btn").click(function(){
+             var name=$("#name").val();
+              localStorage.setItem("name", name); //存储需要的信息
+          });
+     });
+  </script>
+  ```
+
+  **标签页 2**：
+
+  ```js
+  $(function(){
+      window.addEventListener("storage", function(e){
+  	   console.log(e.key + "=" + e.newValue);
+      });     //使用storage事件监听添加、修改、删除的动作
+  });
+  ```
+
+  > `e` 中常用属性
+  >
+  > * e.key：发生变化的 key
+  > * e.oldValue：旧的值
+  > * e.newValue：新的值
+  >
+  > ---
+  >
+  > `localStorage` 方法
+  >
+  >  localStorate.setItem(), localStorage.removeItem() 或者 localStorage.clear()
+  >
+  > 如果是调用的 localStorage.clear()，则 e.key 的值是 null（测试结果，不一定在每个浏览器上都一样）
+  >
+  > 直接修改值： localStorage.test = “hello storage”
+
+
+
+## 2. websocket 是什么？
+
+WebSocket **不是 HTTP 协议**，HTTP 只负责建立 WebSocket 连接。
+
+websocket 的**原理自然就是 socke**t，即 tcp/ip 通讯
+
+http 也是基于 tcp/ip 通讯，只不过包了一层，加了限制并简化了使用
+
+你可以把WebSocket看成是一个改良设计
+
+在**以前 HTTP 协议**中所谓的 keep-alive connection 是指在一次 TCP 连接中完成多个 HTTP 请求，但是对每个请求仍然要单独发 header；所谓的 polling 是指从客户端（一般就是浏览器）不断主动的向服务器发 HTTP 请求查询是否有新数据
+
+这两种模式有一个共同的**缺点**，就是除了真正的数据部分外，**服务器和客户端还要大量交换 HTTP header，信息交换效率很低。**
+
+WebSocket **解决的第一个问题**是，通过第一个 HTTP request 建立了 TCP 连接之后，之后的交换数据都不需要再发 HTTP request 了，使得这个长连接变成了一个真。长连接。
+
+在此基础上 WebSocket 还是一个**双通道**的连接，在同一个 TCP 连接上既可以发也可以收信息。
+
+
+
+## 3. webSocket 如何兼容低版本浏览器
+
+Adobe Flash Socket 、 ActiveX HTMLFile (IE) 、 基于 multipart 编码发送 XHR 、 基于长轮询的 XHR
+
+
+
+# 三、标签
+
+## 1. img 中的 alt 和元素的 title 属性作用
+
+* alt
+
+  如果无法显示图像，浏览器将显示 alt 指定的内容
+
+* title
+
+  鼠标移到元素上显示的内容
+
+## 2. table 和 div+css 的区别
+
+* div：加载方式是即读即加载，遇到<div> 没有遇到</div> 的时候一样加载<div> 中的内容，读多少加载多少；
+  table
+
+* table：加载方式是完成后加载，遇到<table> 后，在读到</table> 之前，<table> 中的内容不加载
+
+## 3. HTML 语义化的理解
+
+1. 去掉或者丢失样式的时候能够让页面呈现出清晰的结构
+2. 有利于 SEO：和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重；
+3. 方便其他设备解析（如屏幕阅读器、盲人阅读器、移动设备）以意义的方式来渲染网页；
+4. 便于团队开发和维护，语义化更具可读性，是下一步吧网页的重要动向，遵循 W3C 标准的团队都遵循这个标准，可以减少差异化。 HTML5 中新增加的很多标签（如：`<article>`、`<nav>`、`<header>`和`<footer>`等） 就是基于语义化设计原则）
+
+## 4. iframe缺点
+
+- iframe 会阻塞主页面的 Onload 事件
+- 搜索引擎的检索程序⽆法解读这种页面，不利于 SEO
+- iframe 和主页面共享连接池，⽽浏览器对相同域的连接有限制，所以会影响页面⾯的并行加载
+
+## 5. b 与 strong 的区别
+
+**`<b>`为了加粗而加粗，`<strong>`为了标明重点而加粗。**
+
+它们的区别就再于一个是**物理元素**，一个是**逻辑元素**。
+
+物理元素所强调的是一种物理行为，比如说我把一段文字用 b 标记加粗了，我的意思是告诉浏览器应该给我加粗了显示这段文字，从单词的语义也可以分析得出，b 是 Bold（加粗）的简写，所以这个 B 标记所传达的意思只是加粗，没有任何其它的作用。
+
+而 Strong 我们从字面理解就可以知道他是强调的意思，所以我们用这个标记向浏览器传达了一个强调某段文字的消息，而这个 Strong 就是我们所说的逻辑元素，他是强调文档逻辑的，并非是通知浏览器应该如何显示。
+
+## 6. i 与 em 的区别
+
+同样，**I 是 Italic（斜体），而 em 是 emphasize（强调）。**
+
+所以说：物理元素是告诉浏览器我应该以何种格式显示文字，逻辑元素告诉浏览器这些文字有怎么样的重要性。
