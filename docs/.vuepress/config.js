@@ -1,9 +1,9 @@
-var psd=require('./psd')
+var psd = require('./psd')
 
 module.exports = {
   title: 'Rodrick',
   description: 'Talk is cheap,show me the code.',
-  base:'/blog/',
+  base: '/blog/',
   head: [
     ['link', { rel: 'icon', href: '/fav.ico' }],
   ],
@@ -38,10 +38,17 @@ module.exports = {
     ],
     // valineConfig 评论
     valineConfig: {
+      /**
+       * module.exports={
+          appId: 'Ku8egeKXzFIuu8TkdMv0b7OF-MdYXbMMI',
+          appKey: 'rlAkigkuUcU7LaSRBA4QB6Yd',
+          serverURLs:'https://ku8egekx.api.lncldglobal.com',
+        }
+       */
       appId: psd.appId,// your appId
       appKey: psd.appKey, // your appKey
       visitor: true,
-      serverURLs:psd.serverURLs,
+      serverURLs: psd.serverURLs,
       placeholder: 'Hi~留下邮箱可以第一时间收到回复的邮件提醒哦(๑´ㅂ`๑)',
       emojiCDN: '//i0.hdslb.com/bfs/emote/',
       emojiMaps: {
