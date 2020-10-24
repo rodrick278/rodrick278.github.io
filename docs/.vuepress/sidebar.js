@@ -2,6 +2,7 @@ module.exports = {
   '/frontEnd/vue/': [{
     title: 'vue全家桶',
     children: [
+      'vue基础',
       'vue-cli',
       'vue-router',
       'vuex'
@@ -19,6 +20,7 @@ module.exports = {
       'js/JavaScript 中 call()、apply()、bind() 的用法',
       'js/对象的原始值转换',
       'js/可选链',
+      'js/随机数方法',
     ]
   },{
     title: 'CSS',
