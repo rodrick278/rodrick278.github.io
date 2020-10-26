@@ -31,9 +31,9 @@ tags:
 </body>
 ```
 产生的画面如下
-![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982350-104a4b0a-0a23-4503-b0c8-6c2aa628ba7c.png#align=left&display=inline&height=121&margin=%5Bobject%20Object%5D&originHeight=227&originWidth=496&status=done&style=none&width=264)
+![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982350-104a4b0a-0a23-4503-b0c8-6c2aa628ba7c.png?align=left&display=inline&height=121&margin=%5Bobject%20Object%5D&originHeight=227&originWidth=496&status=done&style=none&width=264)
 当我们在console中填入 app.name='WOW' 画面自动变成
-![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982379-12a419f8-e9ce-4fec-afea-2844ac7127f1.png#align=left&display=inline&height=129&margin=%5Bobject%20Object%5D&originHeight=239&originWidth=805&status=done&style=none&width=436)
+![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982379-12a419f8-e9ce-4fec-afea-2844ac7127f1.png?align=left&display=inline&height=129&margin=%5Bobject%20Object%5D&originHeight=239&originWidth=805&status=done&style=none&width=436)
 ## v-for 列表展示
 
 
@@ -94,14 +94,14 @@ tags:
 
 
 **Model–view–viewmodel **[**维基百科**](https://zh.wikipedia.org/wiki/MVVM)
-![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982422-64ae8a28-4e62-404c-9491-2de197c29726.png#align=left&display=inline&height=282&margin=%5Bobject%20Object%5D&originHeight=521&originWidth=980&status=done&style=none&width=531)![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982482-4fd21739-2775-4c87-91df-f96da4503869.png#align=left&display=inline&height=419&margin=%5Bobject%20Object%5D&originHeight=806&originWidth=1007&status=done&style=none&width=524)
+![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982422-64ae8a28-4e62-404c-9491-2de197c29726.png?align=left&display=inline&height=282&margin=%5Bobject%20Object%5D&originHeight=521&originWidth=980&status=done&style=none&width=531)![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982482-4fd21739-2775-4c87-91df-f96da4503869.png?align=left&display=inline&height=419&margin=%5Bobject%20Object%5D&originHeight=806&originWidth=1007&status=done&style=none&width=524)
 **计数器案例中的MVVM**
-![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982553-235e62d8-702e-45c1-8b4b-64252695fce6.png#align=left&display=inline&height=443&margin=%5Bobject%20Object%5D&originHeight=1032&originWidth=1264&status=done&style=none&width=542)
+![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982553-235e62d8-702e-45c1-8b4b-64252695fce6.png?align=left&display=inline&height=443&margin=%5Bobject%20Object%5D&originHeight=1032&originWidth=1264&status=done&style=none&width=542)
 ## 生命周期
 
 
 vue内部调用callhook()执行钩子回调（？）
-![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982611-b6a09eb3-08d2-4ae3-b001-9a3e0f1ece56.png#align=left&display=inline&height=3039&margin=%5Bobject%20Object%5D&originHeight=3039&originWidth=1200&status=done&style=none&width=1200)
+![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982611-b6a09eb3-08d2-4ae3-b001-9a3e0f1ece56.png?align=left&display=inline&height=3039&margin=%5Bobject%20Object%5D&originHeight=3039&originWidth=1200&status=done&style=none&width=1200)
 
 
 # 基础语法
@@ -585,7 +585,7 @@ vue：
 ```
 
 
-![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982710-cab8f74d-5ea4-4aa1-91ef-181965209324.png#align=left&display=inline&height=908&margin=%5Bobject%20Object%5D&originHeight=908&originWidth=1630&status=done&style=none&width=1630)
+![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982710-cab8f74d-5ea4-4aa1-91ef-181965209324.png?align=left&display=inline&height=908&margin=%5Bobject%20Object%5D&originHeight=908&originWidth=1630&status=done&style=none&width=1630)
 ### v-for中响应式可用方法
 push pop[从后面删] shift[从开头删] unshift[数组开头添加元素] splice(位置,删几个元素,插入一个元素) sort reverse 响应
 ```javascript
@@ -702,7 +702,7 @@ filters:(data){
 
 
 ### 修饰符用法
-![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982782-687ff7b7-4abd-4d49-a795-379533749a23.png#align=left&display=inline&height=360&margin=%5Bobject%20Object%5D&originHeight=932&originWidth=1148&status=done&style=none&width=443)
+![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982782-687ff7b7-4abd-4d49-a795-379533749a23.png?align=left&display=inline&height=360&margin=%5Bobject%20Object%5D&originHeight=932&originWidth=1148&status=done&style=none&width=443)
 
 - lazy&number&trim
 ```html
@@ -738,7 +738,7 @@ Vue.component('my-cpn', cpn)
 ```
 
 
-![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982826-7eed3b8b-35f2-44c8-a3fd-ac6efe167ace.png#align=left&display=inline&height=804&margin=%5Bobject%20Object%5D&originHeight=804&originWidth=2025&status=done&style=none&width=2025)
+![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982826-7eed3b8b-35f2-44c8-a3fd-ac6efe167ace.png?align=left&display=inline&height=804&margin=%5Bobject%20Object%5D&originHeight=804&originWidth=2025&status=done&style=none&width=2025)
 ### 全局和局部组件
 ```javascript
 // 2. 注册组件（全局组件，意味着可以在多个vue实例下使用）         
@@ -758,13 +758,13 @@ var app=new Vue({
 ```
 
 
-![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982865-9ed91097-de60-4445-bf75-278014bb5120.png#align=left&display=inline&height=409&margin=%5Bobject%20Object%5D&originHeight=929&originWidth=1693&status=done&style=none&width=746)
+![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982865-9ed91097-de60-4445-bf75-278014bb5120.png?align=left&display=inline&height=409&margin=%5Bobject%20Object%5D&originHeight=929&originWidth=1693&status=done&style=none&width=746)
 
 
 ### 父子组件关系
 
 
-![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982918-ca544faf-49e6-47e7-8914-f121ce6d2ce9.png#align=left&display=inline&height=617&margin=%5Bobject%20Object%5D&originHeight=891&originWidth=923&status=done&style=none&width=639)
+![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982918-ca544faf-49e6-47e7-8914-f121ce6d2ce9.png?align=left&display=inline&height=617&margin=%5Bobject%20Object%5D&originHeight=891&originWidth=923&status=done&style=none&width=639)
 
 
 语法糖
@@ -835,7 +835,7 @@ components: {
 ### 父传子props
 
 
-![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982973-bcc907c7-dd21-4456-a611-483535b9e93b.png#align=left&display=inline&height=453&margin=%5Bobject%20Object%5D&originHeight=453&originWidth=1903&status=done&style=none&width=1903)![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243983018-a69a81c7-c308-46ac-bec4-9c6955b02678.png#align=left&display=inline&height=1076&margin=%5Bobject%20Object%5D&originHeight=1076&originWidth=1472&status=done&style=none&width=1472)![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243983073-2635917b-d397-4f8f-893e-d788a3b46495.png#align=left&display=inline&height=1119&margin=%5Bobject%20Object%5D&originHeight=1119&originWidth=2102&status=done&style=none&width=2102)
+![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243982973-bcc907c7-dd21-4456-a611-483535b9e93b.png?align=left&display=inline&height=453&margin=%5Bobject%20Object%5D&originHeight=453&originWidth=1903&status=done&style=none&width=1903)![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243983018-a69a81c7-c308-46ac-bec4-9c6955b02678.png?align=left&display=inline&height=1076&margin=%5Bobject%20Object%5D&originHeight=1076&originWidth=1472&status=done&style=none&width=1472)![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243983073-2635917b-d397-4f8f-893e-d788a3b46495.png?align=left&display=inline&height=1119&margin=%5Bobject%20Object%5D&originHeight=1119&originWidth=2102&status=done&style=none&width=2102)
 
 
 注意props定义不要使用驼峰写法 识别会有问题 推荐c-xxx这种短横链接方式
@@ -844,7 +844,7 @@ components: {
 ### 子传父$emit
 
 
-![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243983135-9184bc81-26f6-4caa-ba4a-ee6c278719d7.png#align=left&display=inline&height=923&margin=%5Bobject%20Object%5D&originHeight=923&originWidth=1869&status=done&style=none&width=1869)
+![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243983135-9184bc81-26f6-4caa-ba4a-ee6c278719d7.png?align=left&display=inline&height=923&margin=%5Bobject%20Object%5D&originHeight=923&originWidth=1869&status=done&style=none&width=1869)
 
 
 ### 父访问子与子访问父
@@ -853,19 +853,19 @@ components: {
 - this.children
 
 
-![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243983178-d5846ca0-fab1-48c6-9a01-649c4ebf3d75.png#align=left&display=inline&height=483&margin=%5Bobject%20Object%5D&originHeight=483&originWidth=746&status=done&style=none&width=746)
+![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243983178-d5846ca0-fab1-48c6-9a01-649c4ebf3d75.png?align=left&display=inline&height=483&margin=%5Bobject%20Object%5D&originHeight=483&originWidth=746&status=done&style=none&width=746)
 
 
 - **this.$refs[这个常用]**
 
 
-![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243983226-e8e8b537-52c5-4c86-abd1-01c48849d647.png#align=left&display=inline&height=944&margin=%5Bobject%20Object%5D&originHeight=944&originWidth=1891&status=done&style=none&width=1891)
+![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243983226-e8e8b537-52c5-4c86-abd1-01c48849d647.png?align=left&display=inline&height=944&margin=%5Bobject%20Object%5D&originHeight=944&originWidth=1891&status=done&style=none&width=1891)
 
 
 - this.$parent
 
 
-![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243983266-10029c75-bbb5-4740-ba2e-336e47a84265.png#align=left&display=inline&height=883&margin=%5Bobject%20Object%5D&originHeight=883&originWidth=2003&status=done&style=none&width=2003)
+![](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603243983266-10029c75-bbb5-4740-ba2e-336e47a84265.png?align=left&display=inline&height=883&margin=%5Bobject%20Object%5D&originHeight=883&originWidth=2003&status=done&style=none&width=2003)
 
 
 ## 09-插槽slot
