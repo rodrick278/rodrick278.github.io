@@ -21,6 +21,7 @@ module.exports = {
       'js/对象的原始值转换',
       'js/可选链',
       'js/随机数方法',
+      'js/深浅拷贝实现',
     ]
   },{
     title: 'CSS',
