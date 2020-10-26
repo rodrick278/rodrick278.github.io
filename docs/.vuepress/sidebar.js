@@ -5,7 +5,8 @@ module.exports = {
       'vue基础',
       'vue-cli',
       'vue-router',
-      'vuex'
+      'vuex',
+      '事件总线的使用'
     ]
   }],
   '/frontEnd/': [{
