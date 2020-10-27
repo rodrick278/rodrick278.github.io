@@ -32,23 +32,23 @@ graph TB
 
 1. **圆角矩形**：表示开始和结束
 
-![image](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603779004545-9e5e50e1-b0a2-4678-b950-2502ee2d5cee.png)
+![image](https://gitee.com/rodrick278/img/raw/master/img/1603779004545-9e5e50e1-b0a2-4678-b950-2502ee2d5cee.png)
 
 1. **矩形**：表示过程，也就是整个流程中的一个环节
 
-![image](https://cdn.nlark.com/yuque/0/2020/png/2735301/1603779004527-3e362dcf-9a81-4ebc-ab30-7a4bcaa73202.png)
+![image](https://gitee.com/rodrick278/img/raw/master/img/1603779004527-3e362dcf-9a81-4ebc-ab30-7a4bcaa73202.png)
 
 1. **单向箭头线段**：表示流程进行方向
 
-![image](https://cdn.nlark.com/yuque/0/2020/jpeg/2735301/1603779004533-95931a13-b16c-46a5-9d2c-253234993b90.jpeg)
+![image](https://gitee.com/rodrick278/img/raw/master/img/1603779004533-95931a13-b16c-46a5-9d2c-253234993b90.jpeg)
 
 1. **菱形**：表示判断、决策
 
-![image](https://cdn.nlark.com/yuque/0/2020/jpeg/2735301/1603779004509-6b60610b-7a49-4e24-bb42-20620ccf87c0.jpeg)
+![image](https://gitee.com/rodrick278/img/raw/master/img/1603779004509-6b60610b-7a49-4e24-bb42-20620ccf87c0.jpeg)
 
 1.  **圆形**：表示连接。为避免流程过长或有交叉，可将流程切开，圆形即相当于切口处的连接头（成对出现）
 
-![image](https://cdn.nlark.com/yuque/0/2020/jpeg/2735301/1603779004544-75db12f1-717e-4287-bdc7-bab6c5f3bb23.jpeg)
+![image](https://gitee.com/rodrick278/img/raw/master/img/1603779004544-75db12f1-717e-4287-bdc7-bab6c5f3bb23.jpeg)
 
 1.  另外还有嵌入在以上符号中的描述文本
 
