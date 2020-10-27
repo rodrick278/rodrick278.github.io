@@ -64,9 +64,9 @@ graph TB
     D((连接))
 ```
 
-####  
 
-![img](https://cdn.nlark.com/yuque/__mermaid_v3/0a4256155ad8598c6470a6d169514973.svg)
+
+![img](https://gitee.com/rodrick278/img/raw/master/img/0a4256155ad8598c6470a6d169514973.svg)
 
 - A,B,C,D是描述节点的名字，可以理解为变量名，方便后面复用
 - 括号是不同图形：
@@ -96,7 +96,7 @@ graph TD
 
 这里的 `|xxx|` 代表节点的选项 
 
-![img](https://cdn.nlark.com/yuque/__mermaid_v3/0ea5a8d3afd4fdfb917e7bc3781eea35.svg)
+![img](https://gitee.com/rodrick278/img/raw/master/img/0ea5a8d3afd4fdfb917e7bc3781eea35.svg)
 
 ### 3. 其他图形
 
@@ -123,7 +123,7 @@ graph TB
   C-->D
 ```
 
-![img](https://cdn.nlark.com/yuque/__mermaid_v3/3c8c5f8e4f619907797eadfd4517a4d1.svg)
+![img](https://gitee.com/rodrick278/img/raw/master/img/3c8c5f8e4f619907797eadfd4517a4d1.svg)
 
 
 
@@ -141,7 +141,7 @@ graph LR
   end
 ```
 
-![img](https://cdn.nlark.com/yuque/__mermaid_v3/0870675ae4c232ae3c90adfb4516ef74.svg)
+![img](https://gitee.com/rodrick278/img/raw/master/img/0870675ae4c232ae3c90adfb4516ef74.svg)
 
 **后面的都是复制来的，不常用，需要时回头再来学** 
 
