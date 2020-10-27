@@ -9,7 +9,7 @@ tags:
 
 本文以Typora 为例
 
-# 一、graph(流程图)
+## 一、graph(流程图)
 
 每次作图时，代码以「**graph <布局方向>」**开头，如：
 
@@ -26,9 +26,9 @@ graph TB
 - LR（Left Right）
 - RL
 
-## 1. 节点画法
+### 1. 节点画法
 
-### 1.1 节点类型
+#### 1.1 节点类型
 
 1. **圆角矩形**：表示开始和结束
 
@@ -54,7 +54,7 @@ graph TB
 
 
 
-### 1.2 画节点
+#### 1.2 画节点
 
 ```
 graph TB
@@ -64,7 +64,7 @@ graph TB
     D((连接))
 ```
 
-###  
+####  
 
 ![img](https://cdn.nlark.com/yuque/__mermaid_v3/0a4256155ad8598c6470a6d169514973.svg)
 
@@ -78,7 +78,7 @@ graph TB
 
 
 
-## 2. 完整画图
+### 2. 完整画图
 
 ```
 graph TD
@@ -98,7 +98,7 @@ graph TD
 
 ![img](https://cdn.nlark.com/yuque/__mermaid_v3/0ea5a8d3afd4fdfb917e7bc3781eea35.svg)
 
-## 3. 其他图形
+### 3. 其他图形
 
 ```
 graph TB
@@ -127,9 +127,9 @@ graph TB
 
 
 
-# 二、subgraph(子图)
+## 二、subgraph(子图)
 
-## 1. 格式
+### 1. 格式
 
 ```
 graph LR
@@ -145,9 +145,9 @@ graph LR
 
 **后面的都是复制来的，不常用，需要时回头再来学** 
 
-# 三、sequenceDiagram(序列图)
+## 三、sequenceDiagram(序列图)
 
-## 功能
+### 功能
 
 - participant
   参与者，相当先定义模块，可通过设定参与者(participant)的顺序控制展示顺序。
@@ -266,7 +266,7 @@ sequenceDiagram
   end
 ```
 
-## 连线
+### 连线
 
 | 代码 | 形状       |
 | ---- | ---------- |
@@ -291,13 +291,13 @@ sequenceDiagram
   A --x B : none
 ```
 
-# 四、gantt(甘特图)
+## 四、gantt(甘特图)
 
 甘特图是一类条形图，由Karol Adamiechi在1896年提出, 而在1910年Henry Gantt也独立的提出了此种图形表示。通常用在对项目终端元素和总结元素的开始及完成时间进行的描述
 
 
 
-## 功能
+### 功能
 
 | 代码       | 解释               |
 | ---------- | ------------------ |
@@ -315,7 +315,7 @@ sequenceDiagram
 
 
 
-## 日期写入格式
+### 日期写入格式
 
 默认为：`dateFormat YYYY-MM-DD`
 
@@ -342,7 +342,7 @@ sequenceDiagram
 
 
 
-## 日期输出格式
+### 日期输出格式
 
 默认为：`axisFormat %Y-%m-%d`
 
@@ -375,7 +375,7 @@ sequenceDiagram
 
 
 
-## 例如
+### 例如
 
 ```
 gantt
@@ -390,7 +390,7 @@ gantt
   C1 : done,after b2,1d
 ```
 
-# 五、classDiagram(类图)
+## 五、classDiagram(类图)
 
 类图是面向对象建模的主要构建块。它用于应用程序结构的一般概念建模，以及用于将模型转换为编程代码的详细建模。类图也可以用于数据建模。类图中的类表示主要元素，应用程序中的交互以及要编程的类。
 
@@ -398,7 +398,7 @@ gantt
 
 
 
-## 功能
+### 功能
 
 - 类
   UML提供了表示类成员的机制，例如属性和方法，以及有关它们的其他信息。图中一个类的单个实例包含三个隔离专区：
@@ -464,7 +464,7 @@ classDiagram
 
 
 
-## 连线
+### 连线
 
 大概定义为：
 
