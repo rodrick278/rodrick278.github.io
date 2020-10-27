@@ -23,6 +23,7 @@ module.exports = {
       'js/可选链',
       'js/随机数方法',
       'js/深浅拷贝实现',
+      'js/Array常用处理',
     ]
   },{
     title: 'CSS',
