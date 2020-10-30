@@ -24,6 +24,7 @@ module.exports = {
       'js/随机数方法',
       'js/深浅拷贝实现',
       'js/Array常用处理',
+      'js/防抖与节流',
     ]
   },{
     title: 'CSS',
