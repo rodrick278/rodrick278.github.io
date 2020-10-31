@@ -6,7 +6,7 @@ module.exports = {
       'vue-cli',
       'vue-router',
       'vuex',
-      '事件总线的使用'
+      '浅谈组件通讯'
     ]
   }],
   '/frontEnd/': [{
@@ -26,7 +26,7 @@ module.exports = {
       'js/Array常用处理',
       'js/防抖与节流',
     ]
-  },{
+  }, {
     title: 'CSS',
     children: [
       'css/各种页面常见布局'
