@@ -147,3 +147,13 @@ console.log(months);
 // expected output: Array ["Jan", "Feb", "March", "April", "May"]
 ```
 
+## 查找元素 find/findIndex
+
+**找到第一个符合条件的元素/下标**
+
+```js
+const arr = [1, 2, 3, 4, 5]
+const findItem = arr.find(item => item === 3) // 返回子项
+const findIndex = arr.findIndex(item => item === 3) // 返回子项的下标
+```
+
