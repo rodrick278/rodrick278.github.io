@@ -7,9 +7,8 @@ tags:
 - vue
 ---
 
-# Vuex
 
-### 一、什么是Vuex
+## 一、什么是Vuex
 
 * Vuex 是一个专为 Vue.js 应用程序开发的**状态管理模式**
 * 它采用 集中式存储管理 应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。
@@ -20,11 +19,11 @@ tags:
 
 * 如果你自己封装实现一个对象能不能保证它里面所有的属性做到响应式呢？当然也可以，只是自己封装可能稍微麻烦一些
 
-### 二、状态管理
+## 二、状态管理
 
 
 
-#### 1.单界面的状态管理
+### 1.单界面的状态管理
 
 ![image-20200903211951047](https://gitee.com/rodrick278/img/raw/master/img/image-20200903211951047.png)
 
@@ -34,7 +33,7 @@ tags:
 
 之前我们已经学过了，使用props传参等，不再赘述
 
-#### 2. 多界面的状态管理
+### 2. 多界面的状态管理
 
 <img src="https://gitee.com/rodrick278/img/raw/master/img/image-20200903221121942.png" alt="image-20200903221121942" style="zoom: 80%;" />
 
@@ -45,7 +44,7 @@ tags:
   * Action 提交的是 mutation，而不是直接变更状态。
   * Action 可以包含任意异步操作。
 
-##### 2.1 基本使用
+#### 2.1 基本使用
 
 1. 目录
 
@@ -132,7 +131,7 @@ tags:
 
      ![image-20200903225809443](https://gitee.com/rodrick278/img/raw/master/img/image-20200903225809443.png)
 
-##### 2.2 Getters
+#### 2.2 Getters
 
 可以把getters看成是计算属性
 
@@ -169,7 +168,7 @@ tags:
     }
   ```
 
-##### 2.3 Mutations(状态更新）
+#### 2.3 Mutations(状态更新）
 
 1. 四种提交(commit)方式
 
@@ -232,7 +231,7 @@ tags:
        },
      ```
 
-##### 2.4 Mutation  需遵守 Vue 的响应规则
+#### 2.4 Mutation  需遵守 Vue 的响应规则
 
 **Mutation中的方法必须是同步方法.**
 
@@ -261,7 +260,7 @@ tags:
   Vue.delete(obj,'oldProp')
   ```
 
-##### 2.5 mutation的类型常量
+#### 2.5 mutation的类型常量
 
 使用常量替代 mutation 事件类型在各种 Flux 实现中是很常见的模式。这样可以使 linter 之类的工具发挥作用，同时把这些常量放在单独的文件中可以让你的代码合作者对整个 app 包含的 mutation 一目了然：
 
@@ -297,7 +296,7 @@ methods: {
 }
 ```
 
-##### 2.6 Actions
+#### 2.6 Actions
 
 **进行异步操作**
 
@@ -349,7 +348,7 @@ methods: {
 
    > 具体代码参见1.
 
-##### 2.7 Modules
+#### 2.7 Modules
 
 基本用法
 
@@ -454,7 +453,7 @@ const modeleA={
 }
 ```
 
-##### 2.8 项目结构
+#### 2.8 项目结构
 
 Vuex 并不限制你的代码结构。但是，它规定了一些需要遵守的规则：
 
@@ -485,3 +484,31 @@ Vuex 并不限制你的代码结构。但是，它规定了一些需要遵守的
         └── products.js   # 产品模块
 ```
 
+#### 2.9 mapGetters
+
+`mapGetters` 辅助函数仅仅是将 store 中的 getter 映射到局部计算属性：
+
+```js
+import { mapGetters } from 'vuex'
+
+export default {
+  // ...
+  computed: {
+  // 使用对象展开运算符将 getter 混入 computed 对象中
+    ...mapGetters([
+      'doneTodosCount',
+      'anotherGetter',
+      // ...
+    ])
+  }
+}
+```
+
+如果你想将一个 getter 属性另取一个名字，使用对象形式：
+
+```js
+...mapGetters({
+  // 把 `this.doneCount` 映射为 `this.$store.getters.doneTodosCount`
+  doneCount: 'doneTodosCount'
+})
+```
