@@ -6,7 +6,9 @@ module.exports = {
       'vue-cli',
       'vue-router',
       'vuex',
-      '浅谈组件通讯'
+      '浅谈组件通讯',
+      'mapGetters&mapActions',
+      'mixin基本使用'
     ]
   }],
   '/frontEnd/': [{
