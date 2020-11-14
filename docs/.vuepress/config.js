@@ -3,6 +3,7 @@ var psd = require('./psd')
 module.exports = {
   title: 'Rodrick',
   description: 'Talk is cheap,show me the code.',
+  // 绑定域名不可用二级目录
   // base: '/blog/',
   head: [
     ['link', { rel: 'icon', href: '/fav.ico' }],
@@ -92,6 +93,7 @@ module.exports = {
       audios: [{
         name: 'History',
         artist: 'Rich Brian',
+        // 绑定域名不可用二级目录
         // url: '/blog/bgm/History.mp3',
         // cover: '/blog/bgm/History.jpg'
         url: '/bgm/History.mp3',
