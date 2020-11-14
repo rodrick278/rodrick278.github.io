@@ -3,7 +3,7 @@ var psd = require('./psd')
 module.exports = {
   title: 'Rodrick',
   description: 'Talk is cheap,show me the code.',
-  base: '/blog/',
+  // base: '/blog/',
   head: [
     ['link', { rel: 'icon', href: '/fav.ico' }],
   ],
@@ -92,8 +92,10 @@ module.exports = {
       audios: [{
         name: 'History',
         artist: 'Rich Brian',
-        url: '/blog/bgm/History.mp3',
-        cover: '/blog/bgm/History.jpg'
+        // url: '/blog/bgm/History.mp3',
+        // cover: '/blog/bgm/History.jpg'
+        url: '/bgm/History.mp3',
+        cover: '/bgm/History.jpg'
       }],
       position: { right: '10px', bottom: '10px', 'z-index': '999999' },
       autoShrink: true,
