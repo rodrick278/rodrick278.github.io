@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
-
+git add -A
+git commit -m 'update'
+git push git@github.com:rodrick278/rodrick278.github.io.git master
 # 确保脚本抛出遇到的错误
 set -e
 

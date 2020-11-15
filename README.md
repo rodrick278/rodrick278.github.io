@@ -2,7 +2,7 @@
 
 交个朋友也行👍！！
 
-
+![](https://badgen.net/badge/blog/檐上有月☽/?icon=sourcegraph&color=FFC83D)![](https://badgen.net/badge/github/Rodrick278/?icon=github&color=blue&label)![](https://badgen.net/badge/yuque/yuque/?icon=telegram&color=34CE7B&label)
 
 ## Rodrick的个人小站 「檐上有月🌙」
 

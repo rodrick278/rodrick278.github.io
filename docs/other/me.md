@@ -6,6 +6,7 @@ publish: false
 sidebar: false
 ---
 
+
 ## Hi 你好，我是
 
 > 一个医科大学毕业的运气很差生活也不是很顺心的十八线码农
@@ -22,7 +23,8 @@ sidebar: false
 >
 > 可以加个wx来和我聊聊天~
 
+![](https://badgen.net/badge/blog/檐上有月☽/?icon=sourcegraph&color=FFC83D)![](https://badgen.net/badge/github/Rodrick278/?icon=github&color=blue&label)![](https://badgen.net/badge/yuque/yuque/?icon=telegram&color=34CE7B&label)
 
 
-<img src="https://raw.githubusercontent.com/rodrick278/blog/gh-pages/wechat.png" style="zoom: 50%;" />
+![](https://gitee.com/rodrick278/img/raw/master/img/wechat.png)
 
