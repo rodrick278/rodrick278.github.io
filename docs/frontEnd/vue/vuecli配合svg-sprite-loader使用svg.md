@@ -63,7 +63,7 @@ module.exports = {
 关于 webpack 的配置是重点，这里上下两种只是两种不同的写法，本质一样<br />
 <br />参考：[官网说明](https://cli.vuejs.org/zh/guide/webpack.html#%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84-loader) <br />这里配置主要做了这些事：
 
-- 清除 [默认 Loader](https://github.com/rodrick278/Mall/blob/master/vue.config.js) 
+- 清除 [默认 Loader](https://github.com/vuejs/vue-cli/blob/dev/packages/%40vue/cli-service/lib/config/base.js) 
 - 将我们指定的存放 svg 的 icon 文件夹 include 进，并进行配置
 - 给默认的 image loader 添加 svg 处理，默认的配置是没有 svg 的，相关源码：
 ```javascript
