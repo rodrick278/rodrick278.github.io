@@ -8,7 +8,8 @@ module.exports = {
       'vuex',
       '浅谈组件通讯',
       'mapGetters&mapActions',
-      'mixin基本使用'
+      'mixin基本使用',
+      'vuecli配合svg-sprite-loader使用svg'
     ]
   }],
   '/frontEnd/': [{
