@@ -157,3 +157,64 @@ const findItem = arr.find(item => item === 3) // 返回子项
 const findIndex = arr.findIndex(item => item === 3) // 返回子项的下标
 ```
 
+## 数组方法备忘单
+
+- 添加/删除元素：
+
+- - `push(...items)` —— 向尾端添加元素，
+  - `pop()` —— 从尾端提取一个元素，
+  - `shift()` —— 从首端提取一个元素，
+  - `unshift(...items)` —— 向首端添加元素，
+  - `splice(pos, deleteCount, ...items)` —— 从 `pos` 开始删除 `deleteCount` 个元素，并插入 `items`。
+  - `slice(start, end)` —— 创建一个新数组，将从索引 `start` 到索引 `end`（但不包括 `end`）的元素复制进去。
+  - `concat(...items)` —— 返回一个新数组：复制当前数组的所有元素，并向其中添加 `items`。如果 `items` 中的任意一项是一个数组，那么就取其元素。
+
+- 搜索元素：
+
+- - `indexOf/lastIndexOf(item, pos)` —— 从索引 `pos` 开始搜索 `item`，搜索到则返回该项的索引，否则返回 `-1`。
+  - `includes(value)` —— 如果数组有 `value`，则返回 `true`，否则返回 `false`。
+  - `find/filter(func)` —— 通过 `func` 过滤元素，返回使 `func` 返回 `true` 的第一个值/所有值。
+  - `findIndex` 和 `find` 类似，但返回索引而不是值。
+
+- 遍历元素：
+
+- - `forEach(func)` —— 对每个元素都调用 `func`，不返回任何内容。
+
+- 转换数组：
+
+- - `map(func)` —— 根据对每个元素调用 `func` 的结果创建一个新数组。
+  - `sort(func)` —— 对数组进行原位（in-place）排序，然后返回它。
+  - `reverse()` —— 原位（in-place）反转数组，然后返回它。
+  - `split/join` —— 将字符串转换为数组并返回。
+  - `reduce/reduceRight(func, initial)` —— 通过对每个元素调用 `func` 计算数组上的单个值，并在调用之间传递中间结果。
+
+- 其他：
+
+- - `Array.isArray(arr)` 检查 `arr` 是否是一个数组。
+
+请注意，`sort`，`reverse` 和 `splice` 方法修改的是数组本身。
+
+
+
+这些是最常用的方法，它们覆盖 99％ 的用例。但是还有其他几个：
+
+- [arr.some(fn)](https://developer.mozilla.org/zh/docs/Web/JavaScript/Reference/Global_Objects/Array/some)/[arr.every(fn)](https://developer.mozilla.org/zh/docs/Web/JavaScript/Reference/Global_Objects/Array/every) 检查数组。
+  与 `map` 类似，对数组的每个元素调用函数 `fn`。如果任何/所有结果为 `true`，则返回 `true`，否则返回 `false`。
+  这两个方法的行为类似于 `||` 和 `&&` 运算符：如果 `fn` 返回一个真值，`arr.some()` 立即返回 `true` 并停止迭代其余数组项；如果 `fn` 返回一个假值，`arr.every()` 立即返回 `false` 并停止对其余数组项的迭代。
+  我们可以使用 `every` 来比较数组：
+
+  ```js
+  function arraysEqual(arr1, arr2) {
+    return arr1.length === arr2.length && arr1.every((value, index) => value === arr2[index]);
+  }
+  
+  alert( arraysEqual([1, 2], [1, 2])); // true
+  ```
+
+- [arr.fill(value, start, end)](https://developer.mozilla.org/zh/docs/Web/JavaScript/Reference/Global_Objects/Array/fill) —— 从索引 `start` 到 `end`，用重复的 `value` 填充数组。
+
+- [arr.copyWithin(target, start, end)](https://developer.mozilla.org/zh/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin) —— 将从位置 `start` 到 `end` 的所有元素复制到 **自身** 的 `target` 位置（覆盖现有元素）。
+
+- [arr.flat(depth)](https://developer.mozilla.org/zh/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)/[arr.flatMap(fn)](https://developer.mozilla.org/zh/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap) 从多维数组创建一个新的扁平数组。
+
+- [arr.of(element0[, element1[, …[, elementN\]]])](https://developer.mozilla.org/zh/docs/Web/JavaScript/Reference/Global_Objects/Array/of) 基于可变数量的参数创建一个新的 `Array` 实例，而不需要考虑参数的数量或类型。
