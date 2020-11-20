@@ -116,6 +116,5 @@ module.exports = {
     , '@vuepress-reco/vuepress-plugin-pagation'
     , 'ribbon'
     , 'cursor-effects'
-    , 'go-top'
   ]
 }  
