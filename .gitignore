@@ -1,3 +1,6 @@
 node_modules
 /docs/.vuepress/dist
 /docs/.vuepress/psd.js
+
+# local env files
+.env.local
