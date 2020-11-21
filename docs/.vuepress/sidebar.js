@@ -29,6 +29,8 @@ module.exports = {
       'js/Array常用处理',
       'js/防抖与节流',
       'js/postMessage窗口间通讯',
+      'js/解构赋值',
+      'js/Map&Set',
     ]
   }, {
     title: 'CSS',

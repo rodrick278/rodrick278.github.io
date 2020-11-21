@@ -117,4 +117,5 @@ module.exports = {
     , 'ribbon'
     , 'cursor-effects'
   ]
-}  
+}
+
