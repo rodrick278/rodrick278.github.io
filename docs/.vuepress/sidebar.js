@@ -31,6 +31,7 @@ module.exports = {
       'js/postMessage窗口间通讯',
       'js/解构赋值',
       'js/Map&Set',
+      'js/日期和时间',
     ]
   }, {
     title: 'CSS',
