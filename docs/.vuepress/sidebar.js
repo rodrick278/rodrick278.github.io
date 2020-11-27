@@ -32,6 +32,7 @@ module.exports = {
       'js/解构赋值',
       'js/Map&Set',
       'js/日期和时间',
+      'js/对象属性',
     ]
   }, {
     title: 'CSS',
