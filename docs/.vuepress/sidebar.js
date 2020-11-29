@@ -33,6 +33,8 @@ module.exports = {
       'js/Map&Set',
       'js/日期和时间',
       'js/对象属性',
+      'js/Toast组件简单封装',
+      'js/原型链',
     ]
   }, {
     title: 'CSS',
