@@ -47,4 +47,4 @@ tags:
  Toast("copy success!", 800)
 ```
 ## 效果
-![WWWW.gif](https://cdn.nlark.com/yuque/0/2020/gif/2735301/1606536003594-43ca7f25-ac01-42cf-9e62-8dcadf464fde.gif#align=left&display=inline&height=263&margin=%5Bobject%20Object%5D&name=WWWW.gif&originHeight=355&originWidth=418&size=39178&status=done&style=none&width=310)
+![WWWW.gif](https://gitee.com/rodrick278/img/raw/master/img/1606536003594-43ca7f25-ac01-42cf-9e62-8dcadf464fde.gif)
