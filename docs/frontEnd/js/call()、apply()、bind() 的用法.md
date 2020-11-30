@@ -1,11 +1,12 @@
 ---
-title: JavaScript 中 call、apply、bind 的用法
+title: call、apply、bind 的用法
 date: 2020-10-10
 categories:
  - 前端
 tags:
 - js
 ---
+## 基本用法
 
 先看明白下面：
 
@@ -72,3 +73,45 @@ apply 的所有参数都必须放在一个数组里面传进去 **obj.myFun.appl
 bind 除了返回是函数以外，它 的参数和 call 一样。
 
 当然，三者的参数不限定是 string 类型，允许是各种类型，包括函数 、 object 等等！
+
+## 关于 this 丢失
+
+加入我们有如下情况：
+
+```javascript
+let user = {
+  myname: "John",
+  say(){
+  	console.log(`hi,${this.myname}`)
+  }
+}
+
+setTimeout(user.say,1000)
+```
+
+一秒后会打印： `hi,undefined` ，为什么会这样呢，其实是因为 `user.say` 作为回调传入 `setTimeout` 的时候，上下文就不是 `user` 了，相当于是：
+
+```javascript
+let user = {
+  myname: "John",
+  say(){
+  	console.log(`hi,${this.myname}`)
+  }
+}
+let f = user,say
+setTimeout(f,1000)
+```
+
+ 所以我们才需要用包装器包装：
+
+```javascript
+let user = {
+  myname: "John",
+  say(){
+  	console.log(`hi,${this.myname}`)
+  }
+}
+
+setTimeout(() => user.say(),1000)
+```
+
