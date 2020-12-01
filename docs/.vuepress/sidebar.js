@@ -36,6 +36,7 @@ module.exports = {
       'js/Toast组件简单封装',
       'js/原型链',
       'js/类 Class',
+      'js/Generator与异步迭代',
     ]
   }, {
     title: 'CSS',
