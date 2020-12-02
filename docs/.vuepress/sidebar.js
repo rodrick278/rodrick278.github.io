@@ -17,7 +17,7 @@ module.exports = {
     children: [
       'js/ES6核心语法',
       'js/模块化&Webpack',
-      'js/Promise&async&await',
+      'js/Promise&异步函数async',
       'js/WebSocket原理浅析',
       'js/axios',
       'js/变量提升',
