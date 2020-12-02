@@ -28,7 +28,7 @@ tags:
 
 
 ```javascript
-// 第一种写法
+// 第一种写法 
 new Promise((resolve, reject) => {
   setTimeout(() => {
     const successData = 'hello abc!'
