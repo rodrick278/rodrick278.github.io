@@ -37,6 +37,7 @@ module.exports = {
       'js/原型链',
       'js/类 Class',
       'js/Generator与异步迭代',
+      'js/偏函数(Partial)和柯里化(Currying)',
     ]
   }, {
     title: 'CSS',
