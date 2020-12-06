@@ -61,8 +61,9 @@ tags:
 
 - **ele.querySelectorAll(css)** ：返回一个满足 css 选择器的所有节点的可迭代对象
 - **ele.querySelector(css)** ：返回满足 css 选择器的**第一个元素节点**
-- **ele.matches(css) **：检查 ele 是否与给定的 css 选择器匹配，**返回 bool**
-- **ele.closest(css) **：搜索距离 ele 最近的**（包括 ele 本身）**父级链上的**第一个匹配 css 选择器的**元素
+- **ele.matches(css)** ：检查 ele 是否与给定的 css 选择器匹配，**返回 bool**
+- **ele.closest(css)**：搜索距离 ele 最近的**（包括 ele 本身）**父级链上的**第一个匹配 css 选择器的**元素
+
 ### 补充：css 选择器
 
 | 选择器 | 例子 | 例子描述 | CSS |
