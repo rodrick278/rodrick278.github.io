@@ -19,7 +19,7 @@ tags:
 - 父节点： `ele.parentNode` 
 
 
-<br />**注意：节点是包括注释、文本(document等)等等都涵盖在内的。**<br />**<br />如果我们只是单纯的关心操纵的是代表标签的和形成页面结构的**元素节点**，那么使用下面的方法：
+<br />**注意：节点是包括注释、文本(document等)等等都涵盖在内的。**<br /><br />如果我们只是单纯的关心操纵的是代表标签的和形成页面结构的**元素节点**，那么使用下面的方法：
 ### 获取纯元素节点
 <br /><img src="https://gitee.com/rodrick278/img/raw/master/img/1607085786459-87464766-38d3-4007-b624-f2fdb8a8dcb3.png" alt="image.png" style="zoom:50%;" /><br />这些链接和我们在上面提到过的类似，只是在词中间加了 `Element`：
 
@@ -62,7 +62,7 @@ tags:
 - **ele.querySelectorAll(css)** ：返回一个满足 css 选择器的所有节点的可迭代对象
 - **ele.querySelector(css)** ：返回满足 css 选择器的**第一个元素节点**
 - **ele.matches(css)** ：检查 ele 是否与给定的 css 选择器匹配，**返回 bool**
-- **ele.closest(css)**：搜索距离 ele 最近的**（包括 ele 本身）**父级链上的**第一个匹配 css 选择器的**元素
+- **ele.closest(css)** ：搜索距离 ele 最近的 **（包括 ele 本身）** 父级链上的**第一个匹配 css 选择器的**元素
 
 ### 补充：css 选择器
 
@@ -277,10 +277,10 @@ ele.hidden = true
 ```
 
    - 操作 attribute 的方法如下：
-   1. elem.hasAttribute(name) — 检查特性是否存在
-   1. elem.getAttribute(name) — 获取这个特性值
-   1. elem.setAttribute(name, value) — 设置这个特性值 
-   1. elem.removeAttribute(name) — 移除这个特性
+   1. `elem.hasAttribute(name)` — 检查特性是否存在
+   1. `elem.getAttribute(name)` — 获取这个特性值
+   1. `elem.setAttribute(name, value)` — 设置这个特性值 
+   1. `elem.removeAttribute(name)` — 移除这个特性
 ### prop 和 attr 同步⭐
 当一个**标准的** attr 被修改，对应的 prop 也会被改变，反之亦然：
 ```html
