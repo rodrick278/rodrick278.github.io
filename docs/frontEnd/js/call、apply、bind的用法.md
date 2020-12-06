@@ -1,5 +1,5 @@
 ---
-title: call、apply、bind 的用法
+title: call、apply、bind的用法
 date: 2020-10-10
 categories:
  - 前端

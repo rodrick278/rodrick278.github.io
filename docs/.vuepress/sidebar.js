@@ -21,7 +21,7 @@ module.exports = {
       'js/WebSocket原理浅析',
       'js/axios',
       'js/变量提升',
-      'js/call()、apply()、bind() 的用法',
+      'js/call、apply、bind的用法',
       'js/对象的原始值转换',
       'js/可选链',
       'js/随机数方法',
@@ -37,7 +37,8 @@ module.exports = {
       'js/原型链',
       'js/类 Class',
       'js/Generator与异步迭代',
-      'js/偏函数(Partial)和柯里化(Currying)',
+      'js/偏函数Partial和柯里化Currying',
+      'js/DOM操作',
     ]
   }, {
     title: 'CSS',
