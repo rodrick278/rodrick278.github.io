@@ -39,6 +39,7 @@ module.exports = {
       'js/Generator与异步迭代',
       'js/偏函数Partial和柯里化Currying',
       'js/DOM操作',
+      'js/事件处理',
     ]
   }, {
     title: 'CSS',
