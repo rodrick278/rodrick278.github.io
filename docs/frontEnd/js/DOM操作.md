@@ -524,5 +524,11 @@ Hello
 
 <br />
 
-## 坐标 
+## 坐标⭐
+
+我们常常在各种事件 `event` 中会获取到这两种坐标位置：
+
+- `clientX/Y` —— 相对于窗口的坐标
+- `pageX/Y` —— 相对于文档本身的位置
+
 获取一个元素的坐标： `elem.getBoundingClientRect()` ，他会返回一个对象，对象的各个 key 对应的 value 含义如下图，详细坐标说明参见 [JS现代教程](https://zh.javascript.info/coordinates) ：<br />![image.png](https://gitee.com/rodrick278/img/raw/master/img/1607255192628-273b67c0-6ddd-49f4-bc8f-4a548d56be69.png)
