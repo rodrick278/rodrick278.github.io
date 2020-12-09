@@ -40,6 +40,7 @@ module.exports = {
       'js/偏函数Partial和柯里化Currying',
       'js/DOM操作',
       'js/事件处理',
+      'js/事件循环EventLoop',
     ]
   }, {
     title: 'CSS',
