@@ -42,6 +42,7 @@ module.exports = {
       'js/事件处理',
       'js/事件循环EventLoop',
       'js/网络请求',
+      'js/浏览器中存储数据',
     ]
   }, {
     title: 'CSS',
