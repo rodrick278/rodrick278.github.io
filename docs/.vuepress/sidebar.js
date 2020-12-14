@@ -1,3 +1,11 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: rodrick
+ * @Date: 2020-09-08 19:42:36
+ * @LastEditors: rodrick
+ * @LastEditTime: 2020-12-14 23:40:20
+ */
 module.exports = {
   '/frontEnd/vue/': [{
     title: 'vue全家桶',
@@ -43,6 +51,7 @@ module.exports = {
       'js/事件循环EventLoop',
       'js/网络请求',
       'js/浏览器中存储数据',
+      'js/正则表达式',
     ]
   }, {
     title: 'CSS',
