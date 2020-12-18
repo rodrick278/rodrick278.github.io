@@ -349,8 +349,11 @@ CSRF的另一个特征是，攻击者**无法直接窃取到用户的信息**（
 - 而如果设置了 `domain` 属性，然后子域 `api.a.com` 被 **XSS 攻击** 了，那么对方就可以拿到我们的 cookie。
 #### [samesite](https://zh.javascript.info/cookie#samesite) Cookie 属性
 **一、samesite = strict**
+
 只要是来自非同一网站，那么设置了 `samesite=strict` 的 cookie，一定不会被发送
+
 **二、samesite = lax**
+
 假如这个请求是这种请求（改变了当前页面或者打开了新页面）且同时是个GET请求，则这个Cookie可以作为第三方Cookie。
 
 
