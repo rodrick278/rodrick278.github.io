@@ -2,9 +2,9 @@
 title: HTML面试题整理
 date: 2020-10-09
 categories:
- - 面试
+ - 前端
 tags:
-- html
+ - 面试
 ---
 
 # 一、HTML5的新特性

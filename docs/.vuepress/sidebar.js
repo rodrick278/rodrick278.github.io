@@ -1,11 +1,3 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: rodrick
- * @Date: 2020-09-08 19:42:36
- * @LastEditors: rodrick
- * @LastEditTime: 2020-12-14 23:40:20
- */
 module.exports = {
   '/frontEnd/vue/': [{
     title: 'vue全家桶',
@@ -57,6 +49,12 @@ module.exports = {
     title: 'CSS',
     children: [
       'css/各种页面常见布局'
+    ]
+  },{
+    title: '其他',
+    children: [
+      'other/HTML题目整理',
+      'other/Web安全策略'
     ]
   }],
   '/dataBase/': [{

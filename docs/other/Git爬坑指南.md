@@ -2,7 +2,7 @@
 title: Git爬坑指南
 date: 2020-09-10
 categories:
- - 工具
+ - 其他
 tags:
 - git
 author: TianTianUp

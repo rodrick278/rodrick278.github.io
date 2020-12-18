@@ -2,7 +2,7 @@
 title: git-ssh配置
 date: 2020-09-07
 categories:
- - 工具
+ - 其他
 tags:
 - git
 ---
