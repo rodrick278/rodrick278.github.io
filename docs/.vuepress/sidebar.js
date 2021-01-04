@@ -48,7 +48,7 @@ module.exports = {
   }, {
     title: 'CSS',
     children: [
-      'css/各种页面常见布局'
+      'css/CSS笔记专栏'
     ]
   },{
     title: '其他',
