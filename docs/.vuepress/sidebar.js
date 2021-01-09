@@ -50,7 +50,7 @@ module.exports = {
     children: [
       'css/CSS笔记专栏'
     ]
-  },{
+  }, {
     title: '其他',
     children: [
       'other/HTML题目整理',
@@ -70,4 +70,14 @@ module.exports = {
       'HTML题目整理'
     ]
   }],
+  '/CSBase/': [{
+    title: '算法思想',
+    children: [
+      '10大排序算法',
+      'Leetcode题解-双指针',
+    ]
+  }, {
+    title: '数据结构',
+    children: []
+  }]
 }
