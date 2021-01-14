@@ -54,7 +54,8 @@ module.exports = {
     title: '其他',
     children: [
       'other/HTML题目整理',
-      'other/Web安全策略'
+      'other/Web安全策略',
+      'other/HTTP缓存'
     ]
   }],
   '/dataBase/': [{
@@ -62,12 +63,6 @@ module.exports = {
     children: [
       'mysql-根据指定字符分隔字符串然后循环做操作',
       '查询函数LOCATE、POSITION、INSTR、FIND_IN_SET、IN、LIKE'
-    ]
-  }],
-  '/other/interview/': [{
-    title: '面试',
-    children: [
-      'HTML题目整理'
     ]
   }],
   '/CSBase/': [{
