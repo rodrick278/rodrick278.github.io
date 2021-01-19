@@ -71,6 +71,7 @@ module.exports = {
       '10大排序算法',
       'Leetcode题解-双指针',
       'Leetcode题解-排序',
+      'Leetcode题解-贪心思想',
     ]
   }, {
     title: '数据结构',
