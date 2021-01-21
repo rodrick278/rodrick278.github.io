@@ -72,6 +72,7 @@ module.exports = {
       'Leetcode题解-双指针',
       'Leetcode题解-排序',
       'Leetcode题解-贪心思想',
+      'Leetcode题解-二分查找',
     ]
   }, {
     title: '数据结构',
