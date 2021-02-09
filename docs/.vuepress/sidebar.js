@@ -10,6 +10,7 @@ module.exports = {
       'mapGetters&mapActions',
       'mixin基本使用',
       'vuecli配合svg-sprite-loader使用svg',
+      '实现一个mini版的Vue'
     ]
   }],
   '/frontEnd/': [{

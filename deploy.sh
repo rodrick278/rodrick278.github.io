@@ -26,4 +26,4 @@ git commit -m 'deploy'
 # git push -f git@github.com:rodrick278/rodrick278.github.io.git master
 git push -f git@github.com:rodrick278/rodrick278.github.io.git master:gh-pages
 
-# cd -
+cd -
