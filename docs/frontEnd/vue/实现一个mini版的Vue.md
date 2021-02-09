@@ -138,9 +138,19 @@ Object.defineProperty(this, key, {
 ```
 
 ## 对 {{xx}} 文本节点的处理
-因为可能存在形如 `{{person.name}} --- {{person.age}}` 这种形式存在，假设触发 `person.name` 的 `watcher` ，但是不能直接调用 `updater.textUpdater(node, newVal)` ，这样会把原来假设是 `xiaoming --- 18` 替换成 `lisi` （整体被一个 `person.name` 的新值 `lisi` 替换了）。
 
-所以我们调用 `getContent(expr, vm)` ，对整个节点做处理替换，这里传入的 `expr` 就是 `{{person.name}} --- {{person.age}}` ，会循环遍历里面的每一个值去取当前的值去进行替换
+因为可能存在形如 
+```
+{{person.name}} --- {{person.age}}
+``` 
+这种形式存在，假设触发 `person.name` 的 `watcher` ，但是不能直接调用 `updater.textUpdater(node, newVal)` ，这样会把原来假设是 `xiaoming --- 18` 替换成 `lisi` （整体被一个 `person.name` 的新值 `lisi` 替换了）。
+
+
+所以我们调用 `getContent(expr, vm)` ，对整个节点做处理替换，这里传入的 `expr` 就是 
+```
+{{person.name}} --- {{person.age}}
+```
+会循环遍历里面的每一个值去取当前的值去进行替换 
 
 ```javascript
 getContent(expr, vm) {
