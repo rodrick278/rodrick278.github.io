@@ -143,7 +143,7 @@ Object.defineProperty(this, key, {
 
 ## 对 {{xx}} 文本节点的处理
 
-因为可能存在形如 
+因为可能存在形如 ::: v-pre`{{person.name}}`:::
 ```
 {{person.name}} --- {{person.age}}
 ``` 
