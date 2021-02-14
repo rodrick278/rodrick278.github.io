@@ -11,6 +11,7 @@ module.exports = {
       'mixin基本使用',
       'vuecli配合svg-sprite-loader使用svg',
       '实现一个mini版的Vue',
+      '初探vue3',
     ]
   }],
   '/frontEnd/': [{
