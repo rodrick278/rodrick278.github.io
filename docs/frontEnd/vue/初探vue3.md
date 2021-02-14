@@ -147,7 +147,7 @@ setup(){
 
 - 使用：
 
-`<teleport to="body">` 中的 body 是一个 **CSS 选择器 **，用来指定“Teleport 这个 HTML 到该‘body’标签”。<br />**ModalButton.vue**
+`<teleport to="body">` 中的 body 是一个 **CSS 选择器**，用来指定“Teleport 这个 HTML 到该‘body’标签”。<br />**ModalButton.vue**
 ```vue
 <template>
   <div>
@@ -207,7 +207,9 @@ export default {
 ## 三、多根结点
 在 2.x 中我们必须在每个 `<template>` 中设置一个根节点，而在 3.x 中，不再需要这样做了
 ## 四、emit 自定义事件
-`emit` 选项可以将需要自定义发射出去的事件进行收集，可以让我们在 `$emit()` 的时候有更好的代码补全，**而且如果 emit 的事件名是一个原生事件 ，如 `click` ，那么在上层组件触发自定义事件的时候会触发两次。**<br />**<br />**用法：**
+`emit` 选项可以将需要自定义发射出去的事件进行收集，可以让我们在 `$emit()` 的时候有更好的代码补全，**而且如果 emit 的事件名是一个原生事件 ，如 `click` ，那么在上层组件触发自定义事件的时候会触发两次。**
+
+**用法：**
 
 1. 数组
 ```javascript
