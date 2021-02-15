@@ -57,7 +57,8 @@ module.exports = {
     children: [
       'other/HTML题目整理',
       'other/Web安全策略',
-      'other/HTTP缓存'
+      'other/HTTP缓存',
+      'other/手写题整理',
     ]
   }],
   '/dataBase/': [{
