@@ -77,6 +77,7 @@ module.exports = {
       'Leetcode题解-贪心思想',
       'Leetcode题解-二分查找',
       'Leetcode题解-分治',
+      'Leetcode题解-搜索',
     ]
   }, {
     title: '数据结构',
