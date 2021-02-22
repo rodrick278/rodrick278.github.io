@@ -1,7 +1,7 @@
 module.exports = [
   // 时间轴
   { text: 'Home', link: '/', icon: 'reco-home' },
-  { text: 'About', link: '/other/me.md', icon: 'reco-account' },
+  { text: 'About', link: 'https://rodrick.cn/resume/', icon: 'reco-account' },
   { text: 'Timeline', link: '/timeline/', icon: 'reco-date' },
   {
     text: 'D&T',
