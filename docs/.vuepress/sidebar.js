@@ -59,6 +59,8 @@ module.exports = {
       'other/Web安全策略',
       'other/HTTP缓存',
       'other/手写题整理',
+      'other/Webpack之手把手教你玩loader_plugin',
+      'other/Webpack常用记录',
     ]
   }],
   '/dataBase/': [{
