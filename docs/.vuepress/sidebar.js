@@ -60,6 +60,7 @@ module.exports = {
       'other/HTTP缓存',
       'other/手写题整理',
       'other/Webpack之手把手教你玩loader_plugin',
+      'other/Webpack从0到1学会code_splitting',
       'other/Webpack常用记录',
     ]
   }],
