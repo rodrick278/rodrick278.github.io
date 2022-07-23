@@ -62,6 +62,7 @@ module.exports = {
       'other/Webpack之手把手教你玩loader_plugin',
       'other/Webpack从0到1学会code_splitting',
       'other/Webpack常用记录',
+      'other/babel强化',
     ]
   }],
   '/dataBase/': [{
