@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ES6核心语法 | Rodrick</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/fav.ico">
+    <meta name="description" content="Talk is cheap,show me the code.">
+    <link rel="preload" href="/assets/css/0.styles.d9df4e5e.css" as="style"><link rel="preload" href="/assets/js/app.b7f7b9ae.js" as="script"><link rel="preload" href="/assets/js/3.afef4923.js" as="script"><link rel="preload" href="/assets/js/1.169628ac.js" as="script"><link rel="preload" href="/assets/js/24.b70c99d8.js" as="script"><link rel="prefetch" href="/assets/js/10.a50e1294.js"><link rel="prefetch" href="/assets/js/11.d02a4618.js"><link rel="prefetch" href="/assets/js/12.8a5afdb4.js"><link rel="prefetch" href="/assets/js/13.9634f72f.js"><link rel="prefetch" href="/assets/js/14.31719732.js"><link rel="prefetch" href="/assets/js/15.618aae0b.js"><link rel="prefetch" href="/assets/js/16.bef92c96.js"><link rel="prefetch" href="/assets/js/17.66480051.js"><link rel="prefetch" href="/assets/js/18.2f2e5dd1.js"><link rel="prefetch" href="/assets/js/19.ff957bd0.js"><link rel="prefetch" href="/assets/js/20.4437e04f.js"><link rel="prefetch" href="/assets/js/21.dcaf43ca.js"><link rel="prefetch" href="/assets/js/22.3293d283.js"><link rel="prefetch" href="/assets/js/23.d8ad7216.js"><link rel="prefetch" href="/assets/js/25.eab61870.js"><link rel="prefetch" href="/assets/js/26.ca14898e.js"><link rel="prefetch" href="/assets/js/27.a66d4d79.js"><link rel="prefetch" href="/assets/js/28.94c3307b.js"><link rel="prefetch" href="/assets/js/29.b4a899fe.js"><link rel="prefetch" href="/assets/js/30.673f32a2.js"><link rel="prefetch" href="/assets/js/31.2ba5eaad.js"><link rel="prefetch" href="/assets/js/32.85a3c0f1.js"><link rel="prefetch" href="/assets/js/33.b1f31708.js"><link rel="prefetch" href="/assets/js/34.5b2f0847.js"><link rel="prefetch" href="/assets/js/35.90444fcb.js"><link rel="prefetch" href="/assets/js/36.bbe1a383.js"><link rel="prefetch" href="/assets/js/37.c30c10c0.js"><link rel="prefetch" href="/assets/js/38.67af1695.js"><link rel="prefetch" href="/assets/js/39.fced8a3d.js"><link rel="prefetch" href="/assets/js/4.5f305e36.js"><link rel="prefetch" href="/assets/js/40.51a40f49.js"><link rel="prefetch" href="/assets/js/41.be03f798.js"><link rel="prefetch" href="/assets/js/42.52972f0a.js"><link rel="prefetch" href="/assets/js/43.423afee8.js"><link rel="prefetch" href="/assets/js/44.a3a069f7.js"><link rel="prefetch" href="/assets/js/45.b70d08d0.js"><link rel="prefetch" href="/assets/js/46.8638377d.js"><link rel="prefetch" href="/assets/js/47.ec084035.js"><link rel="prefetch" href="/assets/js/48.16e3d473.js"><link rel="prefetch" href="/assets/js/49.c238b649.js"><link rel="prefetch" href="/assets/js/5.826d0ffa.js"><link rel="prefetch" href="/assets/js/50.532ebeea.js"><link rel="prefetch" href="/assets/js/51.46dbefed.js"><link rel="prefetch" href="/assets/js/52.fc74e195.js"><link rel="prefetch" href="/assets/js/53.04ea25cd.js"><link rel="prefetch" href="/assets/js/54.7e0c30f8.js"><link rel="prefetch" href="/assets/js/55.b14e86d6.js"><link rel="prefetch" href="/assets/js/56.8693931f.js"><link rel="prefetch" href="/assets/js/57.c4a90d39.js"><link rel="prefetch" href="/assets/js/58.29b91fde.js"><link rel="prefetch" href="/assets/js/59.af3591b5.js"><link rel="prefetch" href="/assets/js/6.e4bf3f06.js"><link rel="prefetch" href="/assets/js/60.818b5e29.js"><link rel="prefetch" href="/assets/js/61.426bfaf8.js"><link rel="prefetch" href="/assets/js/62.3c322eaf.js"><link rel="prefetch" href="/assets/js/63.0a76e154.js"><link rel="prefetch" href="/assets/js/64.00fae874.js"><link rel="prefetch" href="/assets/js/65.90227f02.js"><link rel="prefetch" href="/assets/js/66.743ad8b9.js"><link rel="prefetch" href="/assets/js/67.f8febd23.js"><link rel="prefetch" href="/assets/js/68.17f57999.js"><link rel="prefetch" href="/assets/js/69.1daf7abe.js"><link rel="prefetch" href="/assets/js/7.925d4a84.js"><link rel="prefetch" href="/assets/js/70.4eea7e17.js"><link rel="prefetch" href="/assets/js/71.ede8ec71.js"><link rel="prefetch" href="/assets/js/72.f918415f.js"><link rel="prefetch" href="/assets/js/73.eeccfbce.js"><link rel="prefetch" href="/assets/js/8.d6924890.js"><link rel="prefetch" href="/assets/js/9.f52f1419.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d9df4e5e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-dad8a512><div data-v-dad8a512><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-dad8a512 data-v-dad8a512><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-dad8a512 data-v-dad8a512><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>Rodrick</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>Rodrick</span>
+            
+          <!---->
+          2022
+        </a></span></div></div> <div class="hide" data-v-dad8a512><header class="navbar" data-v-dad8a512><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/portrait.png" alt="Rodrick" class="logo"> <span class="site-name">Rodrick</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/CS基础/" class="nav-link"><i class="iconfont undefined"></i>
+  CS基础
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据库/" class="nav-link"><i class="iconfont undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="https://rodrick.cn/resume/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-account"></i>
+  About
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  Timeline
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-document"></i>
+      D&amp;T
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>官方文档</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://cn.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Vue
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://composition-api.vuejs.org//" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Vue3
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.webpackjs.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Webpack
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  MDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="http://nodejs.cn/api/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Node中文网
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://react.docschina.org/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  React
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  小程序
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://help.finereport.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  FineReport
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li><li class="dropdown-item"><h4>学习面试</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://zh.javascript.info/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  现代JavaScript教程
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://es6.ruanyifeng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  ES6
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.axihe.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  阿西河
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://leetcode-cn.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  LeetCode
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.nowcoder.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  牛客网
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li><li class="dropdown-item"><h4>工具</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.bejson.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  bejson
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/rodrick278" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/rodrick278" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-mayun"></i>
+  Gitee
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-dad8a512></div> <aside class="sidebar" data-v-dad8a512><div class="personal-info-wrapper" data-v-ca798c94 data-v-dad8a512><img src="/portrait.png" alt="author-avatar" class="personal-img" data-v-ca798c94> <h3 class="name" data-v-ca798c94>
+    Rodrick
+  </h3> <div class="num" data-v-ca798c94><div data-v-ca798c94><h3 data-v-ca798c94>62</h3> <h6 data-v-ca798c94>Article</h6></div> <div data-v-ca798c94><h3 data-v-ca798c94>18</h3> <h6 data-v-ca798c94>Tag</h6></div></div> <hr data-v-ca798c94></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/CS基础/" class="nav-link"><i class="iconfont undefined"></i>
+  CS基础
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据库/" class="nav-link"><i class="iconfont undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="https://rodrick.cn/resume/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-account"></i>
+  About
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  Timeline
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-document"></i>
+      D&amp;T
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>官方文档</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://cn.vuejs.org/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Vue
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://composition-api.vuejs.org//" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Vue3
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.webpackjs.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Webpack
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  MDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="http://nodejs.cn/api/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  Node中文网
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://react.docschina.org/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  React
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  小程序
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://help.finereport.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  FineReport
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li><li class="dropdown-item"><h4>学习面试</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://zh.javascript.info/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  现代JavaScript教程
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://es6.ruanyifeng.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  ES6
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.axihe.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  阿西河
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://leetcode-cn.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  LeetCode
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-subitem"><a href="https://www.nowcoder.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  牛客网
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li><li class="dropdown-item"><h4>工具</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.bejson.com/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  bejson
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/rodrick278" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/rodrick278" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-mayun"></i>
+  Gitee
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>JS</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/frontEnd/js/ES6核心语法.html" class="active sidebar-link">ES6核心语法</a></li><li><a href="/frontEnd/js/模块化&amp;Webpack.html" class="sidebar-link">模块化&amp;Webpack</a></li><li><a href="/frontEnd/js/Promise&amp;异步函数async.html" class="sidebar-link">Promise&amp;异步函数async</a></li><li><a href="/frontEnd/js/WebSocket原理浅析.html" class="sidebar-link">WebSocket原理浅析</a></li><li><a href="/frontEnd/js/axios.html" class="sidebar-link">axios的使用</a></li><li><a href="/frontEnd/js/变量提升.html" class="sidebar-link">ES5的变量提升和ES6的暂时性死区</a></li><li><a href="/frontEnd/js/call、apply、bind的用法.html" class="sidebar-link">call、apply、bind的用法</a></li><li><a href="/frontEnd/js/对象的原始值转换.html" class="sidebar-link">对象的原始值转换</a></li><li><a href="/frontEnd/js/可选链.html" class="sidebar-link">可选链&quot;?.&quot;</a></li><li><a href="/frontEnd/js/随机数方法.html" class="sidebar-link">随机数方法</a></li><li><a href="/frontEnd/js/深浅拷贝实现.html" class="sidebar-link">深浅拷贝实现</a></li><li><a href="/frontEnd/js/Array常用处理.html" class="sidebar-link">Array常用处理</a></li><li><a href="/frontEnd/js/防抖与节流.html" class="sidebar-link">防抖与节流</a></li><li><a href="/frontEnd/js/postMessage窗口间通讯.html" class="sidebar-link">postMessage窗口间通讯</a></li><li><a href="/frontEnd/js/解构赋值.html" class="sidebar-link">解构赋值</a></li><li><a href="/frontEnd/js/Map&amp;Set.html" class="sidebar-link">Map&amp;Set</a></li><li><a href="/frontEnd/js/日期和时间.html" class="sidebar-link">日期和时间</a></li><li><a href="/frontEnd/js/对象属性.html" class="sidebar-link">对象属性</a></li><li><a href="/frontEnd/js/Toast组件简单封装.html" class="sidebar-link">Toast组件简单封装</a></li><li><a href="/frontEnd/js/原型链.html" class="sidebar-link">原型链</a></li><li><a href="/frontEnd/js/类 Class.html" class="sidebar-link">类 Class</a></li><li><a href="/frontEnd/js/Generator与异步迭代.html" class="sidebar-link">Generator与异步迭代</a></li><li><a href="/frontEnd/js/偏函数Partial和柯里化Currying.html" class="sidebar-link">偏函数Partial和柯里化Currying</a></li><li><a href="/frontEnd/js/DOM操作.html" class="sidebar-link">DOM操作</a></li><li><a href="/frontEnd/js/事件处理.html" class="sidebar-link">事件处理</a></li><li><a href="/frontEnd/js/事件循环EventLoop.html" class="sidebar-link">事件循环EventLoop</a></li><li><a href="/frontEnd/js/网络请求.html" class="sidebar-link">网络请求</a></li><li><a href="/frontEnd/js/浏览器中存储数据.html" class="sidebar-link">浏览器中存储数据</a></li><li><a href="/frontEnd/js/正则表达式.html" class="sidebar-link">正则表达式</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>其他</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-dad8a512><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>ES6核心语法</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>Rodrick</span>
+            
+          <!---->
+          2022
+        </a></span></div></div> <div data-v-dad8a512><main class="page"><div class="page-title" style="display:none;"><h1>ES6核心语法</h1> <div data-v-3b7f5bdf><i class="iconfont reco-account" data-v-3b7f5bdf><span data-v-3b7f5bdf>徐小夕</span></i> <i class="iconfont reco-date" data-v-3b7f5bdf><span data-v-3b7f5bdf>2020-08-01</span></i> <i class="iconfont reco-eye" data-v-3b7f5bdf><span id="/frontEnd/js/ES6%E6%A0%B8%E5%BF%83%E8%AF%AD%E6%B3%95.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-3b7f5bdf><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-3b7f5bdf><span class="tag-item" data-v-3b7f5bdf>ES6</span><span class="tag-item" data-v-3b7f5bdf>js</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><blockquote><p>本文为转载</p> <p>作者：徐小夕
+链接：https://juejin.im/post/6844903957853126663
+来源：掘金</p></blockquote> <h3 id="_1-let和const"><a href="#_1-let和const" class="header-anchor">#</a> 1. let和const</h3> <h4 id="let"><a href="#let" class="header-anchor">#</a> let</h4> <blockquote><p>用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效，即let声明的是一个块作用域内的变量。</p></blockquote> <p>特点：</p> <ul><li>不存在变量提升</li> <li>暂时性死区——只要块级作用域内存在let命令，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响</li> <li>不允许重复声明</li> <li>块级作用域——被{}包裹的，外部不能访问内部</li></ul> <p>应用案例与分析：</p> <div class="language- extra-class"><pre class="language-text"><code>// 使用var
+for (var i = 0; i &lt; 5; i++) {
+  setTimeout(function () {
+    console.log(i);
+  });
+}   // =&gt; 5 5 5 5 5
+
+// 使用let
+for (let i = 0; i &lt; 5; i++) {
+  setTimeout(function () {
+    console.log(i);
+  });
+}   // =&gt; 0 1 2 3 4
+复制代码
+</code></pre></div><p>上面使用let的代码中，变量i是let声明的，当前的i只在本轮循环有效，所以每一次循环的i其实都是一个新的变量，JavaScript 引擎内部会记住上一轮循环的值，初始化本轮的变量i时，就在上一轮循环的基础上进行计算所以最后能正常输出i的值。</p> <p>注意：</p> <ol><li>for循环还有一个特别之处，就是设置循环变量的那部分是一个父作用域，而循环体内部是一个单独的子作用域，所以我们可以在循环体内部访问到i的值。</li> <li>let和var全局声明时，var可以通过window的属性访问而let不能。</li></ol> <h4 id="const"><a href="#const" class="header-anchor">#</a> const</h4> <blockquote><p>const声明一个只读的常量。一旦声明，常量的值就不能改变。const实际上保证的是变量指向的那个内存地址所保存的数据不得改动。对于简单类型的数据（数值、字符串、布尔值），值就保存在变量指向的那个内存地址，因此等同于常量。但对于复合类型的数据（主要是对象和数组），变量指向的内存地址，保存的只是一个指向实际数据的指针，const只能保证这个指针是固定的，至于它指向的数据结构是不是可变的，就完全不能控制了。因此，将一个对象声明为常量必须非常小心。</p></blockquote> <p>因此，我们使用const时，不能只声明而不初始化值，否则会报错：</p> <div class="language- extra-class"><pre class="language-text"><code>const a;
+// SyntaxError: Missing initializer in const declaration
+复制代码
+</code></pre></div><p>const的其他特性和let很像，一般推荐用它来声明常量，并且常量名大写。</p> <h3 id="_2-数值的扩展"><a href="#_2-数值的扩展" class="header-anchor">#</a> 2. 数值的扩展</h3> <p>ES6 在Number对象上，新提供了Number.isFinite()和Number.isNaN()两个方法。</p> <h4 id="number-isfinite"><a href="#number-isfinite" class="header-anchor">#</a> Number.isFinite()</h4> <blockquote><p>Number.isFinite()用来检查一个数值是否为有限的（finite），即不是Infinity。 注意，如果参数类型不是数值，Number.isFinite一律返回false。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>Number.isFinite(0.8); // true
+Number.isFinite(NaN); // false
+Number.isFinite(Infinity); // false
+Number.isFinite('hello');  // false
+Number.isFinite(true);  // false
+复制代码
+</code></pre></div><h4 id="number-isnan"><a href="#number-isnan" class="header-anchor">#</a> Number.isNaN()</h4> <blockquote><p>用来检查一个值是否为NaN,如果参数类型不是NaN，Number.isNaN一律返回false</p></blockquote> <p>Number.isFinite和Number.isNaN与传统的全局方法isFinite()和isNaN()的区别在于，传统方法先调用Number()将非数值的值转为数值，再进行判断，而这两个新方法只对数值有效，Number.isFinite()对于非数值一律返回false, Number.isNaN()只有对于NaN才返回true，非NaN一律返回false。</p> <div class="language- extra-class"><pre class="language-text"><code>isFinite(11) // true
+isFinite(&quot;11&quot;) // true
+Number.isFinite(11) // true
+Number.isFinite(&quot;11&quot;) // false
+
+isNaN(NaN) // true
+isNaN(&quot;NaN&quot;) // true
+Number.isNaN(NaN) // true
+Number.isNaN(&quot;NaN&quot;) // false
+Number.isNaN(10) // false
+复制代码
+</code></pre></div><h4 id="number-parseint-number-parsefloat"><a href="#number-parseint-number-parsefloat" class="header-anchor">#</a> Number.parseInt(), Number.parseFloat()</h4> <blockquote><p>ES6 将全局方法parseInt()和parseFloat()，移植到Number对象上面，行为完全保持不变,这样做的目的，是逐步减少全局性方法，使得语言逐步模块化</p></blockquote> <h4 id="number-isinteger"><a href="#number-isinteger" class="header-anchor">#</a> Number.isInteger()</h4> <blockquote><p>Number.isInteger()用来判断一个数值是否为整数；JavaScript 内部，整数和浮点数采用的是同样的储存方法，所以 25 和 25.0 被视为同一个值；如果参数不是数值，Number.isInteger返回false；由于 JavaScript 数值存储为64位双精度格式，数值精度最多可以达到 53 个二进制位，如果数值的精度超过这个限度，第54位及后面的位就会被丢弃，这种情况下，Number.isInteger可能会误判。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>Number.isInteger(15) // true
+Number.isInteger(15.1) // false
+Number.isInteger(15.0) // true
+Number.isInteger('10') // false
+Number.isInteger(true) // false
+// 超出精度范围会误判
+Number.isInteger(5.0000000000000002) // true
+复制代码
+</code></pre></div><h4 id="math-trunc"><a href="#math-trunc" class="header-anchor">#</a> Math.trunc()</h4> <blockquote><p>Math.trunc方法用于去除一个数的小数部分，返回整数部分;对于非数值，Math.trunc内部使用Number方法将其先转为数值;对于空值和无法截取整数的值，返回NaN</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>Math.trunc(2.1) // 2
+Math.trunc(-2.9) // -2
+Math.trunc(-0.1254) // -0
+Math.trunc('125.456') // 125
+Math.trunc(true) //1
+Math.trunc(false) // 0
+Math.trunc(null) // 0
+Math.trunc(NaN);      // NaN
+Math.trunc('bar');    // NaN
+Math.trunc();         // NaN
+Math.trunc(undefined) // NaN
+复制代码
+</code></pre></div><h4 id="math-cbrt"><a href="#math-cbrt" class="header-anchor">#</a> Math.cbrt()</h4> <blockquote><p>Math.cbrt方法用于计算一个数的立方根;对于非数值，Math.cbrt方法内部也是先使用Number方法将其转为数值</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>Math.cbrt(-1) // -1
+Math.cbrt(0)  // 0
+Math.cbrt(8)  // 2
+Math.cbrt('8') // 2
+Math.cbrt('hello') // NaN
+复制代码
+</code></pre></div><h4 id="math-hypot"><a href="#math-hypot" class="header-anchor">#</a> Math.hypot()</h4> <blockquote><p>Math.hypot方法返回所有参数的平方和的平方根</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>Math.hypot(3, 4);        // 5
+Math.hypot(3, 4, 5);     // 7.0710678118654755
+Math.hypot();            // 0
+Math.hypot(NaN);         // NaN
+Math.hypot(3, 4, 'foo'); // NaN
+Math.hypot(3, 4, '5');   // 7.0710678118654755
+Math.hypot(-3); 
+复制代码
+</code></pre></div><p>有了这个api，我们算一个n维勾股定理是不是很方便了呢？</p> <h4 id="指数运算符"><a href="#指数运算符" class="header-anchor">#</a> 指数运算符</h4> <blockquote><p>ES2016 新增了一个指数运算符（**）。这个运算符的一个特点是右结合，而不是常见的左结合。多个指数运算符连用时，是从最右边开始计算的。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>// 相当于 2 ** (3 ** 2)
+2 ** 3 ** 2  // 512
+// =&gt; Math.pow(2, Math.pow(3,2))
+复制代码
+</code></pre></div><p>es6+还扩展了更多的数值api，感兴趣的可以自己去学习研究。</p> <h3 id="_3-数组的扩展"><a href="#_3-数组的扩展" class="header-anchor">#</a> 3. 数组的扩展</h3> <h4 id="扩展运算符"><a href="#扩展运算符" class="header-anchor">#</a> 扩展运算符</h4> <blockquote><p>扩展运算符（spread）是三个点（...），将一个数组转为用逗号分隔的参数序列</p></blockquote> <p>应用：</p> <ol><li>复制数组</li></ol> <div class="language- extra-class"><pre class="language-text"><code>const a1 = [1, 2];
+const a2 = [...a1];
+复制代码
+</code></pre></div><ol><li>合并数组</li></ol> <div class="language- extra-class"><pre class="language-text"><code>const arr1 = ['1', '2'];
+const arr2 = ['c', {a:1} ];
+
+// ES6 的合并数组
+[...arr1, ...arr2]
+复制代码
+</code></pre></div><p>注：这两种方法都是浅拷贝，使用的时候需要注意。</p> <ol><li>将字符串转化为数组</li></ol> <p>使用扩展运算符能够正确识别四个字节的 Unicode 字符。凡是涉及到操作四个字节的 Unicode 字符的函数，都有这个问题。因此，最好都用扩展运算符改写。</p> <div class="language- extra-class"><pre class="language-text"><code>[...'xuxi']
+// [ &quot;x&quot;, &quot;u&quot;, &quot;x&quot;, &quot;i&quot; ]
+复制代码
+</code></pre></div><ol><li>实现了 Iterator 接口的对象</li></ol> <div class="language- extra-class"><pre class="language-text"><code>let nodeList = document.querySelectorAll('div');
+let arr = [...nodeList];
+复制代码
+</code></pre></div><p>上面代码中，querySelectorAll方法返回的是一个NodeList对象。它不是数组，而是一个类似数组的对象。扩展运算符可以将其转为真正的数组，原因就在于NodeList对象实现了 Iterator 。</p> <h4 id="array-from"><a href="#array-from" class="header-anchor">#</a> Array.from()</h4> <blockquote><p>Array.from方法用于将类对象转为真正的数组：类似数组的对象和可遍历的对象（包括 ES6 新增的数据结构 Set 和 Map）。</p></blockquote> <p>实际应用中我们更多的是将Array.from用于DOM 操作返回的 NodeList 集合，以及函数内部的arguments对象。</p> <div class="language- extra-class"><pre class="language-text"><code>// NodeList对象
+let nodeList = document.querySelectorAll('p')
+let arr = Array.from(nodeList)
+
+// arguments对象
+function say() {
+  let args = Array.from(arguments);
+}
+复制代码
+</code></pre></div><p>Array.from还可以接受第二个参数，作用类似于数组的map方法，用来对每个元素进行处理，将处理后的值放入返回的数组。</p> <div class="language- extra-class"><pre class="language-text"><code>Array.from([1, 2, 4], (x) =&gt; x + 1)
+// [2, 3, 5]
+复制代码
+</code></pre></div><h4 id="array-of"><a href="#array-of" class="header-anchor">#</a> Array.of()</h4> <blockquote><p>Array.of方法用于将一组值，转换为数组。Array.of基本上可以用来替代Array()或new Array()，并且不存在由于参数不同而导致的重载。它的行为非常统一。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>Array.of() // []
+Array.of(undefined) // [undefined]
+Array.of(2) // [2]
+Array.of(21, 2) // [21, 2]
+复制代码
+</code></pre></div><h4 id="数组实例的-copywithin"><a href="#数组实例的-copywithin" class="header-anchor">#</a> 数组实例的 copyWithin()</h4> <blockquote><p>数组实例的copyWithin()方法，在当前数组内部，将指定位置的成员复制到其他位置（会覆盖原有成员），然后返回当前数组。也就是说，使用这个方法，会修改当前数组。</p></blockquote> <p>它接受三个参数:</p> <ul><li>target（必需）：从该位置开始替换数据。如果为负值，表示倒数。</li> <li>start（可选）：从该位置开始读取数据，默认为 0。如果为负值，表示从末尾开始计算。</li> <li>end（可选）：到该位置前停止读取数据，默认等于数组长度。如果为负值，表示从末尾开始计算。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>[11, 21, 31, 41, 51].copyWithin(0, 3)  // =&gt; [41, 51, 31, 41, 51]
+// 将3号位复制到0号位
+[1, 2, 3, 4, 5].copyWithin(0, 3, 4)
+复制代码
+</code></pre></div><h4 id="数组实例的-find-和-findindex"><a href="#数组实例的-find-和-findindex" class="header-anchor">#</a> 数组实例的 find() 和 findIndex()</h4> <blockquote><p>数组实例的find方法用于找出第一个符合条件的数组成员。它的参数是一个回调函数，所有数组成员依次执行该回调函数，直到找出第一个返回值为true的成员，然后返回该成员。如果没有符合条件的成员，则返回undefined。数组实例的findIndex方法的用法与find方法非常类似，返回第一个符合条件的数组成员的位置，如果所有成员都不符合条件，则返回-1。这两个方法都可以接受第二个参数，用来绑定回调函数的this对象。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>// find
+[1, 5, 8, 12].find(function(value, index, arr) {
+  return value &gt; 9;
+}) // 12
+
+// findIndex
+[1, 5, 5, 15].findIndex(function(value, index, arr) {
+  return value &gt; 9;
+}) // 3
+
+// 第二个参数
+function f(v){
+  return v &gt; this.age;
+}
+let person = {name: 'John', age: 20};
+[10, 12, 26, 15].find(f, person);    // 26
+复制代码
+</code></pre></div><h4 id="数组实例的-fill"><a href="#数组实例的-fill" class="header-anchor">#</a> 数组实例的 fill()</h4> <blockquote><p>fill方法使用给定值，填充一个数组。fill方法还可以接受第二个和第三个参数，用于指定填充的起始位置和结束位置。注意，如果填充的类型为对象，那么被赋值的是同一个内存地址的对象，而不是深拷贝对象。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>new Array(3).fill(7)
+// [7, 7, 7]
+
+['a', 'b', 'c'].fill(7, 1, 2)
+// ['a', 7, 'c']
+
+// 填充引用类型
+let arr = new Array(2).fill({name: &quot;xuxi&quot;});
+arr[0].name = &quot;xu&quot;;
+arr
+// [{name: &quot;xu&quot;}, {name: &quot;xu&quot;}]
+
+let arr = new Array(2).fill([]);
+arr[0].push(1);
+arr
+// [[1], [1]]
+复制代码
+</code></pre></div><h4 id="数组实例的-includes"><a href="#数组实例的-includes" class="header-anchor">#</a> 数组实例的 includes()</h4> <blockquote><p>Array.prototype.includes方法返回一个布尔值，表示某个数组是否包含给定的值。该方法的第二个参数表示搜索的起始位置，默认为0。如果第二个参数为负数，则表示倒数的位置，如果这时它大于数组长度（比如第二个参数为-4，但数组长度为3），则会重置为从0开始。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>[1, 4, 3].includes(3)     // true
+[1, 2, 4].includes(3)     // false
+[1, 5, NaN, 6].includes(NaN) // true
+复制代码
+</code></pre></div><h4 id="数组实例的-flat-flatmap"><a href="#数组实例的-flat-flatmap" class="header-anchor">#</a> 数组实例的 flat()，flatMap()</h4> <blockquote><p>flat()用于将嵌套的数组“拉平”，变成一维的数组。该方法返回一个新数组，对原数据没有影响。flat()默认只会“拉平”一层，如果想要“拉平”多层的嵌套数组，可以将flat()方法的参数写成一个整数，表示想要拉平的层数，默认为1。如果不管有多少层嵌套，都要转成一维数组，可以用Infinity关键字作为参数。flatMap()方法对原数组的每个成员执行一个函数，然后对返回值组成的数组执行flat()方法。该方法返回一个新数组，不改变原数组。flatMap()只能展开一层数组。flatMap()方法还可以有第二个参数，用来绑定遍历函数里面的this。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>[1, 2, [3, [4, 5]]].flat()
+// [1, 2, 3, [4, 5]]
+
+[1, 2, [3, [4, 5]]].flat(2)
+// [1, 2, 3, 4, 5]
+
+[1, [2, [3]]].flat(Infinity)
+// [1, 2, 3]
+
+// 如果原数组有空位，flat()方法会跳过空位
+[1, 2, , 4, 5].flat()
+// [1, 2, 4, 5]
+
+// flatMap
+[2, 3, 4].flatMap((x) =&gt; [x, x * 2])
+// [2, 4, 3, 6, 4, 8]
+复制代码
+</code></pre></div><h3 id="_4-函数的扩展"><a href="#_4-函数的扩展" class="header-anchor">#</a> 4. 函数的扩展</h3> <h4 id="函数参数的默认值"><a href="#函数参数的默认值" class="header-anchor">#</a> 函数参数的默认值</h4> <div class="language- extra-class"><pre class="language-text"><code>function say(name = 'xuxi') {
+    alert(name)
+}
+复制代码
+</code></pre></div><p>注意点：</p> <ul><li>参数变量是默认声明的，所以不能用let或const再次声明</li> <li>使用参数默认值时，函数不能有同名参数</li> <li>参数默认值不是传值的，而是每次都重新计算默认值表达式的值。也就是说，参数默认值是惰性求值的</li> <li>参数如果传入undefined，将触发该参数等于默认值，null则没有这个效果。 关键点</li></ul> <h4 id="函数的-length-属性"><a href="#函数的-length-属性" class="header-anchor">#</a> 函数的 length 属性</h4> <blockquote><p>指定了默认值以后，函数的length属性，将返回没有指定默认值的参数个数。也就是说，指定了默认值后，length属性将失真；如果设置了默认值的参数不是尾参数，那么length属性也不再计入后面的参数了。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>(function (a) {}).length // 1
+(function (a = 5) {}).length // 0
+(function (a, b, c = 5) {}).length // 2
+// 参数不是尾参数
+(function (a = 0, b, c) {}).length // 0
+(function (a, b = 1, c) {}).length // 1
+复制代码
+</code></pre></div><h4 id="作用域"><a href="#作用域" class="header-anchor">#</a> 作用域</h4> <p>一旦设置了参数的默认值，函数进行声明初始化时，参数会形成一个单独的作用域。等到初始化结束，这个作用域就会消失。在不设置参数默认值时，是不会出现的。</p> <h4 id="箭头函数"><a href="#箭头函数" class="header-anchor">#</a> 箭头函数</h4> <p>由于箭头函数的用法比较简单，我们来看看注意点：</p> <ul><li>函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。</li> <li>不可以当作构造函数，也就是说，不可以使用new命令，否则会抛出一个错误。</li> <li>不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用 rest 参数代替。</li> <li>不可以使用yield命令，因此箭头函数不能用作 Generator 函数。</li></ul> <p>不适合场景：</p> <div class="language- extra-class"><pre class="language-text"><code>// 定义对象的方法，且该方法内部包括this,
+// 因为对象不构成单独的作用域，导致say箭头函数定义时的作用域就是全局作用域
+const person = {
+  year: 9,
+  say: () =&gt; {
+    this.year--
+  }
+}
+
+// 需要动态this的时候，也不应使用箭头函数
+// 代码运行时，点击按钮会报错，因为button的监听函数是一个箭头函数，导致里面的this是全局对象
+var btn = document.getElementById('btn');
+btn.addEventListener('click', () =&gt; {
+  this.classList.add('on');
+});
+复制代码
+</code></pre></div><h3 id="_5-对象的扩展"><a href="#_5-对象的扩展" class="header-anchor">#</a> 5. 对象的扩展</h3> <h4 id="对象的扩展运算符"><a href="#对象的扩展运算符" class="header-anchor">#</a> 对象的扩展运算符</h4> <blockquote><p>对象的扩展运算符（...）用于取出参数对象的所有可遍历属性，拷贝到当前对象之中;等同于使用Object.assign()方法</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>let a = {w: 'xu', y: 'xi'}
+let b = {name: '12'}
+let ab = { ...a, ...b };
+// 等同于
+let ab = Object.assign({}, a, b);
+复制代码
+</code></pre></div><h4 id="object-is"><a href="#object-is" class="header-anchor">#</a> Object.is()</h4> <blockquote><p>用来比较两个值是否严格相等，与严格比较运算符（===）的行为基本一致;不同之处只有两个：一是+0不等于-0，二是NaN等于自身。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>+0 === -0 //true
+NaN === NaN // false
+
+Object.is(+0, -0) // false
+Object.is(NaN, NaN) // true
+复制代码
+</code></pre></div><h4 id="object-assign"><a href="#object-assign" class="header-anchor">#</a> Object.assign()</h4> <blockquote><p>用于对象的合并，将源对象的所有可枚举属性，复制到目标对象; 如果只有一个参数，Object.assign会直接返回该参数; 由于undefined和null无法转成对象，所以如果它们作为参数，就会报错; 其他类型的值（即数值、字符串和布尔值）不在首参数，也不会报错。但是，除了字符串会以数组形式，拷贝入目标对象，其他值都不会产生效果。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>// 合并对象
+const target = { a: 1, b: 1 };
+
+const source1 = { b: 2, c: 2 };
+const source2 = { c: 3 };
+
+Object.assign(target, source1, source2);
+target // {a:1, b:2, c:3}
+
+// 非对象和字符串的类型将忽略
+const a1 = '123';
+const a2 = true;
+const a3 = 10;
+
+const obj = Object.assign({}, a1, a2, a3);
+console.log(obj); // { &quot;0&quot;: &quot;1&quot;, &quot;1&quot;: &quot;2&quot;, &quot;2&quot;: &quot;3&quot; }
+复制代码
+</code></pre></div><p>注意点：</p> <ul><li>Object.assign方法实行的是浅拷贝，而不是深拷贝。也就是说，如果源对象某个属性的值是对象，那么目标对象拷贝得到的是这个对象的引用</li> <li>对于嵌套的对象，遇到同名属性，Object.assign的处理方法是替换，而不是添加</li> <li>Object.assign可以用来处理数组，但是会把数组视为对象</li></ul> <div class="language- extra-class"><pre class="language-text"><code>Object.assign([1, 2, 3], [4, 5])
+// [4, 5, 3]
+复制代码
+</code></pre></div><ul><li>Object.assign只能进行值的复制，如果要复制的值是一个取值函数，那么将求值后再复制</li></ul> <div class="language- extra-class"><pre class="language-text"><code>const a = {
+  get num() { return 1 }
+};
+const target = {};
+
+Object.assign(target, a)
+// { num: 1 }
+复制代码
+</code></pre></div><p>应用场景：</p> <ul><li>为对象添加属性和方法</li> <li>克隆/合并对象</li> <li>为属性指定默认值</li></ul> <h4 id="object-keys"><a href="#object-keys" class="header-anchor">#</a> Object.keys()</h4> <blockquote><p>返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历属性的键名</p></blockquote> <h4 id="object-values"><a href="#object-values" class="header-anchor">#</a> Object.values()</h4> <blockquote><p>返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历属性的键值。注意：返回数组的成员顺序：如果属性名为数值的属性，是按照数值大小，从小到大遍历的</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>const obj = { 100: '1', 2: '2', 7: '3' };
+Object.values(obj)
+// [&quot;2&quot;, &quot;3&quot;, &quot;1&quot;]
+复制代码
+</code></pre></div><h4 id="object-entries"><a href="#object-entries" class="header-anchor">#</a> Object.entries()</h4> <blockquote><p>返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历属性的键值对数组;如果原对象的属性名是一个 Symbol 值，该属性会被忽略</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>const obj = { a: '1', b: 1, [Symbol()]: 123 };
+Object.entries(obj)
+// [ [&quot;a&quot;, &quot;1&quot;], [&quot;b&quot;, 1] ]
+复制代码
+</code></pre></div><h4 id="object-fromentries"><a href="#object-fromentries" class="header-anchor">#</a> Object.fromEntries()</h4> <blockquote><p>Object.fromEntries()方法是Object.entries()的逆操作，用于将一个键值对数组转为对象</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>Object.fromEntries([
+  ['a', '1'],
+  ['b', 2]
+])
+// { a: &quot;1&quot;, b: 2 }
+复制代码
+</code></pre></div><p>应用场景：</p> <ul><li>将键值对的数据结构还原为对象，因此特别适合将 Map 结构转为对象</li> <li>配合URLSearchParams对象，将查询字符串转为对象</li></ul> <div class="language- extra-class"><pre class="language-text"><code>Object.fromEntries(new URLSearchParams('name=xuxi&amp;year=24'))
+// { name: &quot;xuxi&quot;, year: &quot;24&quot; }
+复制代码
+</code></pre></div><h3 id="_6-symbol"><a href="#_6-symbol" class="header-anchor">#</a> 6. symbol</h3> <blockquote><p>ES6 引入了一种新的原始数据类型Symbol，表示唯一的值。它是 JavaScript 语言的第七种数据类型，前六种是：undefined、null、布尔值（Boolean）、字符串（String）、数值（Number）、对象（Object）。Symbol 值通过Symbol函数生成。凡是属性名属于 Symbol 类型，就都是独一无二的，可以保证不会与其他属性名产生冲突。</p></blockquote> <p>注意点：</p> <ul><li>Symbol函数前不能使用new命令，否则会报错</li> <li>由于 Symbol 值不是对象，所以不能添加属性。本质上，它是一种类似于字符串的数据类型</li> <li>Symbol函数可以接受一个字符串作为参数，表示对 Symbol 实例的描述，方便区分</li> <li>Symbol函数的参数只是表示对当前 Symbol 值的描述，因此相同参数的Symbol函数的返回值是不相等的</li> <li>Symbol 值不能与其他类型的值进行运算，会报错</li> <li>Symbol 值作为对象属性名时，不能用点运算符</li> <li>在对象的内部，使用 Symbol 值定义属性时，Symbol 值必须放在方括号之中</li> <li>Symbol 值作为属性名时，该属性还是公开属性，不是私有属性</li> <li>Symbol 作为属性名时属性不会出现在for...in、for...of循环中，也不会被Object.keys()、Object.getOwnPropertyNames()、JSON.stringify()返回。但是，它也不是私有属性，使用Object.getOwnPropertySymbols方法可以获取指定对象的所有 Symbol 属性名。</li></ul> <h4 id="symbol-for-symbol-keyfor"><a href="#symbol-for-symbol-keyfor" class="header-anchor">#</a> Symbol.for()，Symbol.keyFor()</h4> <blockquote><p>Symbol.for()接受一个字符串作为参数，然后搜索有没有以该参数作为名称的 Symbol 值。如果有，就返回这个 Symbol 值，否则就新建并返回一个以该字符串为名称的 Symbol 值。Symbol.keyFor方法返回一个已登记的 Symbol 类型值的key</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>let a1 = Symbol.for('123');
+let a2 = Symbol.for('123');
+
+a1 === a2 // true
+
+// Symbol.for()与Symbol()这两种写法，都会生成新的Symbol。
+// 它们的区别是，前者会被登记在全局环境中供搜索，后者不会
+Symbol.keyFor(a1) // &quot;123&quot;
+let c2 = Symbol(&quot;f&quot;);
+Symbol.keyFor(c2) // undefined
+复制代码
+</code></pre></div><h3 id="_7-set和map数据结构"><a href="#_7-set和map数据结构" class="header-anchor">#</a> 7. set和map数据结构</h3> <h4 id="set"><a href="#set" class="header-anchor">#</a> set</h4> <blockquote><p>ES6提供了新的数据结构Set,类似于数组，但是成员的值都是唯一的，没有重复的值。Set本身是一个构造函数，用来生成Set数据结构。</p></blockquote> <p>实例属性和方法：</p> <ul><li>add(value)：添加某个值，返回Set结构本身。</li> <li>delete(value)：删除某个值，返回一个布尔值，表示删除是否成功。</li> <li>has(value)：返回一个布尔值，表示该值是否为Set的成员。</li> <li>clear()：清除所有成员，没有返回值。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>s.add(1).add(3).add(3);
+// 注意3被加入了两次
+
+s.size // 2
+
+s.has(1) // true
+s.has(2) // false
+
+s.delete(3);
+s.has(3) // false
+复制代码
+</code></pre></div><p>遍历操作：</p> <ul><li>keys()：返回键名的遍历器</li> <li>values()：返回键值的遍历器</li> <li>entries()：返回键值对的遍历器</li> <li>forEach()：使用回调函数遍历每个成员</li></ul> <p>Set的遍历顺序就是插入顺序，这个特性有时非常有用，比如使用Set保存一个回调函数列表，调用时就能保证按照添加顺序调用。</p> <p>应用场景：</p> <div class="language- extra-class"><pre class="language-text"><code>// 数组去重
+let arr = [1，2，2，3];
+let unique = [...new Set(arr)];
+// or
+function dedupe(array) {
+  return Array.from(new Set(array));
+}
+
+let a = new Set([1, 2, 3]);
+let b = new Set([4, 3, 2]);
+
+// 并集
+let union = new Set([...a, ...b]);
+// Set {1, 2, 3, 4}
+
+// 交集
+let intersect = new Set([...a].filter(x =&gt; b.has(x)));
+// set {2, 3}
+
+// 差集
+let difference = new Set([...a].filter(x =&gt; !b.has(x)));
+// Set {1}
+复制代码
+</code></pre></div><h4 id="map"><a href="#map" class="header-anchor">#</a> map</h4> <blockquote><p>类似于对象，也是键值对的集合，各种类型的值（包括对象）都可以当作键。Map结构提供了“值—值”的对应，是一种更完善的Hash结构实现。</p></blockquote> <p>实例属性和方法:</p> <ul><li>size属性: 返回Map结构的成员总数</li> <li>set(key, value): set方法设置key所对应的键值，然后返回整个Map结构。如果key已经有值，则键值会被更新，否则就新生成该键,set方法返回的是Map本身，因此可以采用链式写法</li> <li>get(key) : get方法读取key对应的键值，如果找不到key，返回undefined</li> <li>has(key) : has方法返回一个布尔值，表示某个键是否在Map数据结构中</li> <li>delete(key) : delete方法删除某个键，返回true。如果删除失败，返回false</li> <li>clear() : clear方法清除所有成员，没有返回值</li></ul> <p>遍历方法和set类似，Map结构转为数组结构，比较快速的方法是结合使用扩展运算符（...）：</p> <div class="language- extra-class"><pre class="language-text"><code>let map = new Map([
+  [1, 'one'],
+  [2, 'two'],
+  [3, 'three'],
+]);
+
+[...map.keys()]
+// [1, 2, 3]
+
+[...map.values()]
+// ['one', 'two', 'three']
+
+[...map.entries()]
+// [[1,'one'], [2, 'two'], [3, 'three']]
+
+[...map]
+// [[1,'one'], [2, 'two'], [3, 'three']]
+复制代码
+</code></pre></div><p>数组转map：</p> <div class="language- extra-class"><pre class="language-text"><code>new Map([[true, 7], [{foo: 3}, ['abc']]])
+// Map {true =&gt; 7, Object {foo: 3} =&gt; ['abc']}
+复制代码
+</code></pre></div><p>Map转为对象:</p> <div class="language- extra-class"><pre class="language-text"><code>function strMapToObj(strMap) {
+  let obj = Object.create(null);
+  for (let [k,v] of strMap) {
+    obj[k] = v;
+  }
+  return obj;
+}
+
+let myMap = new Map().set('yes', true).set('no', false);
+strMapToObj(myMap)
+// { yes: true, no: false }
+复制代码
+</code></pre></div><p>对象转为Map</p> <div class="language- extra-class"><pre class="language-text"><code>function objToStrMap(obj) {
+  let strMap = new Map();
+  for (let k of Object.keys(obj)) {
+    strMap.set(k, obj[k]);
+  }
+  return strMap;
+}
+
+objToStrMap({yes: true, no: false})
+// [ [ 'yes', true ], [ 'no', false ] ]
+复制代码
+</code></pre></div><h3 id="_8-proxy-和-reflect"><a href="#_8-proxy-和-reflect" class="header-anchor">#</a> 8. Proxy 和 Reflect</h3> <p>关于Proxy 和 Reflect的介绍，我会单独写个完整的模块来介绍及其应用。</p> <h3 id="_9-promise对象"><a href="#_9-promise对象" class="header-anchor">#</a> 9. promise对象</h3> <blockquote><p>Promise是异步编程的一种解决方案，简单说就是一个容器，里面保存着某个未来才会结束的事件的结果。从语法上说，Promise是一个对象，从它可以获取异步操作的消息。</p></blockquote> <p>特点：</p> <ul><li>对象的状态不受外界影响。Promise对象代表一个异步操作，有三种状态：Pending（进行中）、Resolved（已完成，又称Fulfilled）和Rejected（已失败）。只有异步操作的结果，可以决定当前是哪一种状态，任何其他操作都无法改变这个状态。</li> <li>一旦状态改变，就不会再变，任何时候都可以得到这个结果。整个过程不可逆。</li></ul> <p>使用：</p> <ul><li>基本用法</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// 实现异步加载图片
+function loadImageAsync(url) {
+ return new Promise(function(resolve, reject) {
+   var image = new Image();
+
+   image.onload = function() {
+     resolve(image);
+   };
+
+   image.onerror = function() {
+     reject(new Error('图片加载失败'));
+   };
+
+   image.src = url;
+ });
+}
+// 使用
+loadImageAsync('http://xxxx/api').then((data) =&gt; {
+   // some code
+}).catch(err =&gt; console.log(err))
+复制代码
+</code></pre></div><p>resolve函数将Promise对象的状态从“未完成”变为“成功”，即Pending =&gt; Resolved，并将异步操作的结果作为参数传递出去；reject函数将Promise对象的状态从“未完成”变为“失败”，即Pending =&gt; Rejected，并将异步操作报出的错误作为参数传递出去。</p> <p>Promise实例生成以后，可以用then方法分别指定Resolved状态和Reject状态的回调函数。then方法的第一个参数是Resolved状态的回调函数，第二个参数（可选）是Rejected状态的回调函数。</p> <p>then方法返回的是一个新的Promise实例（注意，不是原来那个Promise实例）。因此可以采用链式写法，即then方法后面再调用另一个then方法。catch方法是.then(null, rejection)的别名，用于指定发生错误时的回调函数。</p> <ul><li>Promise.all()</li></ul> <blockquote><p>Promise.all方法用于将多个Promise实例，包装成一个新的Promise实例。只有Promise.all内的所有promise状态都变成fulfilled，它的状态才会变成fulfilled，此时内部promise的返回值组成一个数组，传递给Promise.all的回调函数。只要Promise.all内部有一个promise被rejected，Promise.all的状态就变成rejected，此时第一个被reject的实例的返回值，会传递给p的回调函数。</p></blockquote> <ul><li>Promise.race()</li></ul> <blockquote><p>Promise.race方法同样是将多个Promise实例，包装成一个新的Promise实例。只要Promise.race中有一个实例率先改变状态，Promise.race的状态就跟着改变。那个率先改变的 Promise 实例的返回值，就传递给Promise.race的回调函数。</p></blockquote> <p>实现请求超时处理：</p> <div class="language- extra-class"><pre class="language-text"><code>const ajaxWithTime = (url, ms) =&gt; Promise.race([
+  fetch(url),
+  new Promise(function (resolve, reject) {
+    setTimeout(() =&gt; reject(new Error('request timeout')), ms)
+  })
+])
+ajaxWithTime('http://xxx', 5000).then(response =&gt; console.log(response))
+.catch(error =&gt; console.log(error))
+复制代码
+</code></pre></div><ul><li>Promise.resolve()</li></ul> <blockquote><p>将现有对象转为Promise对象。如果参数是Promise实例，那么Promise.resolve将不做任何修改、原封不动地返回这个实例；如果参数是一个原始值，或者是一个不具有then方法的对象，则Promise.resolve方法返回一个新的Promise对象，状态为Resolved；需要注意的是，立即resolve的Promise对象，是在本轮“事件循环”（event loop）的结束时，而不是在下一轮“事件循环”的开始时。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>setTimeout(function () {
+  console.log('3');
+}, 0);
+
+Promise.resolve().then(function () {
+  console.log('2');
+});
+
+console.log('1');
+
+// 1
+// 2
+// 3
+复制代码
+</code></pre></div><ul><li>finally()</li></ul> <blockquote><p>finally方法用于指定不管Promise对象最后状态如何，都会执行的操作。它接受一个普通的回调函数作为参数，该函数不管怎样都必须执行</p></blockquote> <h3 id="_10-async函数"><a href="#_10-async函数" class="header-anchor">#</a> 10. async函数</h3> <blockquote><p>async函数就是Generator函数的语法糖,async函数的await命令后面，可以是Promise对象和原始类型的值（数值、字符串和布尔值，但这时等同于同步操作）。async函数的返回值是Promise对象，你可以用then方法指定下一步的操作。进一步说，async函数完全可以看作多个异步操作，包装成的一个Promise对象，而await命令就是内部then命令的语法糖。</p></blockquote> <p>应用案例：</p> <p>1.指定时间后返回数据</p> <div class="language- extra-class"><pre class="language-text"><code>function timeout(ms) {
+  return new Promise((resolve) =&gt; {
+    setTimeout(resolve, ms);
+  });
+}
+
+async function asyncPrint(value, ms) {
+  await timeout(ms);
+  console.log(value)
+}
+
+asyncPrint('xu xi', 5000);
+复制代码
+</code></pre></div><p>注意事项：</p> <ul><li>await命令后面的Promise对象，运行结果可能是rejected，所以最好把await命令放在try...catch代码块中</li> <li>多个await命令后面的异步操作，如果不存在继发关系，最好让它们同时触发</li></ul> <div class="language- extra-class"><pre class="language-text"><code>let [a, b] = await Promise.all([a(), b()]);
+复制代码
+</code></pre></div><ul><li>await命令只能用在async函数之中，如果用在普通函数，就会报错</li></ul> <p>应用场景：</p> <ol><li>按顺序完成异步操作</li></ol> <div class="language- extra-class"><pre class="language-text"><code>async function fetchInOrder(urls) {
+  // 并发读取远程请求
+  const promises = urls.map(async url =&gt; {
+    const res = await fetch(url);
+    return res.text();
+  });
+
+  // 按次序输出
+  for (const promise of promises) {
+    console.log(await promise);
+  }
+}
+复制代码
+</code></pre></div><h3 id="_11-class"><a href="#_11-class" class="header-anchor">#</a> 11. class</h3> <blockquote><p>通过class关键字，可以定义类。ES6的class可以看作只是一个语法糖，它的绝大部分功能，ES5都可以做到，class写法只是让对象原型的写法更加清晰、更像面向对象编程的语法而已。类的数据类型就是function，类本身就指向构造函数。构造函数的prototype属性，在ES6的“类”上面继续存在。类的所有方法都定义在类的prototype属性上面。另外，类的内部所有定义的方法，都是不可枚举的.</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>class Person {
+  constructor(){
+    // ...
+  }
+
+  toString(){
+    // ...
+  }
+}
+
+// 等同于
+
+Person.prototype = {
+  toString(){},
+  toValue(){}
+};
+
+// 不可枚举
+Object.keys(Person.prototype)
+// []
+Object.getOwnPropertyNames(Person.prototype)
+// [&quot;constructor&quot;,&quot;toString&quot;]
+// 注：ES5的写法，toString方法是可枚举的
+复制代码
+</code></pre></div><h4 id="constructor方法"><a href="#constructor方法" class="header-anchor">#</a> constructor方法</h4> <blockquote><p>方法是类的默认方法，通过new命令生成对象实例时，自动调用该方法。一个类必须有constructor方法，如果没有显式定义，一个空的constructor方法会被默认添加。constructor方法默认返回实例对象（this），可以指定返回另外一个对象</p></blockquote> <p>注：类的构造函数，不使用new是没法调用的，会报错。这是它跟普通构造函数的一个主要区别，后者不用new也可以执行。</p> <h4 id="不存在变量提升"><a href="#不存在变量提升" class="header-anchor">#</a> 不存在变量提升</h4> <h4 id="this的指向"><a href="#this的指向" class="header-anchor">#</a> this的指向</h4> <blockquote><p>类的方法内部如果含有this，它默认指向类的实例。但是，必须非常小心，一旦单独使用该方法，很可能报错</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>// 解决this指向问题
+class Say {
+  constructor() {
+    // 在构造方法中绑定this或者使用箭头函数
+    this.sayName = this.sayName.bind(this);
+  }
+}
+复制代码
+</code></pre></div><h4 id="class的继承"><a href="#class的继承" class="header-anchor">#</a> Class的继承</h4> <blockquote><p>Class之间可以通过extends关键字实现继承，子类必须在constructor方法中调用super方法，否则新建实例时会报错。这是因为子类没有自己的this对象，而是继承父类的this对象，如果不调用super方法，子类就得不到this对象。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>class Color extends Point {
+  constructor(x, y, name) {
+    super(x, y); // 调用父类的constructor(x, y)
+    this.name = name;
+  }
+
+  toString() {
+    return this.name + ' ' + super.toString(); // 调用父类的toString()
+  }
+}
+复制代码
+</code></pre></div><h4 id="class的取值函数-getter-和存值函数-setter"><a href="#class的取值函数-getter-和存值函数-setter" class="header-anchor">#</a> Class的取值函数（getter）和存值函数（setter）</h4> <blockquote><p>与ES5一样，在Class内部可以使用get和set关键字，对某个属性设置存值函数和取值函数，拦截该属性的存取行为</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>class MyHTMLElement {
+  constructor(element) {
+    this.element = element;
+  }
+
+  get html() {
+    return this.element.innerHTML;
+  }
+
+  set html(value) {
+    console.log('success', value)
+    this.element.innerHTML = value;
+  }
+}
+
+const el = new MyHTMLElement(el);
+el.html('1111')  // success 1111
+复制代码
+</code></pre></div><h4 id="class的静态方法"><a href="#class的静态方法" class="header-anchor">#</a> Class的静态方法</h4> <blockquote><p>如果在一个方法前，加上static关键字，就表示该方法不会被实例继承，而是直接通过类来调用，这就称为“静态方法”。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>class Hi {
+  static say() {
+    return 'hello';
+  }
+}
+
+Hi.say() // 'hello'
+
+let hi = new Hi();
+hi.say()
+// TypeError: foo.classMethod is not a function
+复制代码
+</code></pre></div><h3 id="_12-修饰器decorator"><a href="#_12-修饰器decorator" class="header-anchor">#</a> 12. 修饰器Decorator</h3> <h4 id="类的修饰"><a href="#类的修饰" class="header-anchor">#</a> 类的修饰</h4> <blockquote><p>修饰器是一个用来修改类的行为的函数。其对类的行为的改变，是代码编译时发生的，而不是在运行时。</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>function get(target) {
+  target.get = 'GET';
+}
+
+@get
+class MyHttpClass {}
+
+console.log(MyHttpClass.get) // GET
+
+// 如果觉得一个参数不够用，可以在修饰器外面再封装一层函数
+function get(type) {
+  return function(target) {
+    target.type = type;
+    // 添加实例属性
+    target.prototype.isDev = true;
+  }
+}
+
+@get('json')
+class MyHttpClass {}
+MyHttpClass.type // 'json'
+
+let http = new MyHttpClass();
+http.isDev // true
+复制代码
+</code></pre></div><h4 id="方法的修饰"><a href="#方法的修饰" class="header-anchor">#</a> 方法的修饰</h4> <blockquote><p>修饰器不仅可以修饰类，还可以修饰类的属性,修饰器只能用于类和类的方法，不能用于函数，因为存在函数提升。如果同一个方法有多个修饰器，会像剥洋葱一样，先从外到内进入，然后由内向外执行。</p></blockquote> <p>修饰类的属性时，修饰器函数一共可以接受三个参数，第一个参数是所要修饰的目标对象，第二个参数是所要修饰的属性名，第三个参数是该属性的描述对象。</p> <div class="language- extra-class"><pre class="language-text"><code>// 下面的@log修饰器，可以起到输出日志的作用
+class Kinds {
+  list = []
+  @log
+  add(name) {
+    return this.list.push(name)
+  }
+}
+
+function log(target, name, descriptor) {
+  var oldValue = descriptor.value;
+  console.log('old', oldValue);
+  // ...
+  return descriptor;
+}
+
+const dog = new Kinds();
+
+dog.add('dog');
+
+// 多个装饰器的洋葱式执行顺序
+function printN(id){
+    console.log('print-0', id);
+    return (target, property, descriptor) =&gt; console.log('print-1', id);
+}
+
+class A {
+    @printN(1)
+    @printN(2)
+    say(){}
+}
+// print-0 1
+// print-0 2
+// print-1 2
+// print-1 1
+复制代码
+</code></pre></div><h3 id="_13-module"><a href="#_13-module" class="header-anchor">#</a> 13. module</h3> <blockquote><p>模块功能主要由两个命令构成：export和import。export命令用于规定模块的对外接口，import命令用于输入其他模块提供的功能。</p></blockquote> <h4 id="export"><a href="#export" class="header-anchor">#</a> export</h4> <p>如果你希望外部能够读取模块内部的某个变量，就必须使用export关键字输出该变量</p> <div class="language- extra-class"><pre class="language-text"><code>// lib.js
+// 直接导出
+export var name = 'xu xi';
+
+// 优先考虑下面这种写法,更清晰优雅
+var year = 1958;
+export {year};
+
+//导出函数
+export function multiply(x, y) {
+  return x * y;
+};
+
+// 使用as关键字重命名
+export {
+  year as y
+};
+
+// 注意：export命令规定的是对外的接口，必须与模块内部的变量建立一一对应关系
+var a = 1;
+// 报错，因为通过变量a，直接输出的是1，1只是一个值，不是接口
+export a;
+// 同理，下面的也会报错
+function f() {}
+export f;
+
+// 另外，export语句输出的接口，与其对应的值是动态绑定关系，
+// 即通过该接口，可以取到模块内部实时的值
+export var a = 1;
+setTimeout(() =&gt; a = 2, 1000);  // 1s之后a变为2
+复制代码
+</code></pre></div><p>export命令可以出现在模块的任何位置，只要处于模块顶层就可以。如果处于块级作用域内，就会报错，import也是如此。这是因为处于条件代码块之中，就没法做静态优化了，违背了ES6模块的设计初衷。</p> <h4 id="import"><a href="#import" class="header-anchor">#</a> import</h4> <blockquote><p>使用export命令定义了模块的对外接口后，其他 JS 文件就可以通过import命令加载这个模块。import命令具有提升效果，会提升到整个模块的头部，首先执行。是因为import命令是编译阶段执行的，在代码运行之前。如果多次重复执行同一句import语句，那么只会执行一次，而不会执行多次</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>// main.js
+import {other, year} from './lib';
+// 将输入的变量重命名
+import { year as y } from './lib';
+
+// 提升
+say()
+import { say } from './lib';
+
+// 整体加载模块
+import * as lib from './lib';
+console.log(lib.year, lib.say())
+复制代码
+</code></pre></div><h4 id="export-default-命令"><a href="#export-default-命令" class="header-anchor">#</a> export default 命令</h4> <blockquote><p>为模块指定默认输出</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>// a.js
+export default function () {
+  console.log('xu xi');
+}
+
+// b.js
+import a from './a'
+</code></pre></div></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><div class="kanbanniang" data-v-5775ee02><div class="banniang-container" style="display:;" data-v-5775ee02><div class="messageBox" style="left:68px;bottom:190px;display:none;" data-v-5775ee02>
+      欢迎来到 Rodrick
+    </div> <div class="operation" style="left:70px;bottom:40px;display:none;" data-v-5775ee02><i class="kbnfont kbn-ban-home ban-home" data-v-5775ee02></i> <i class="kbnfont kbn-ban-message message" data-v-5775ee02></i> <i class="kbnfont kbn-ban-close close" data-v-5775ee02></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-5775ee02><i class="kbnfont kbn-ban-info info" data-v-5775ee02></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:;" data-v-5775ee02></i></div> <canvas id="banniang" width="150" height="220" class="live2d" style="left:5px;bottom:5px;opacity:0.9;" data-v-5775ee02></canvas></div> <div class="showBanNiang" style="display:none;" data-v-5775ee02>
+    看板娘
+  </div></div><canvas id="vuepress-canvas-ribbon"></canvas><canvas id="vuepress-canvas-cursor"></canvas></div></div>
+    <script src="/assets/js/app.b7f7b9ae.js" defer></script><script src="/assets/js/3.afef4923.js" defer></script><script src="/assets/js/1.169628ac.js" defer></script><script src="/assets/js/24.b70c99d8.js" defer></script>
+  </body>
+</html>
